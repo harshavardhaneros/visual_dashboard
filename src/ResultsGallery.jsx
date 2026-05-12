@@ -130,14 +130,14 @@ export default function ResultsGallery() {
   });
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] px-6 py-10">
+    <div className="min-h-screen bg-[#f4f4f5] px-6 py-12">
 
       <div className="max-w-7xl mx-auto">
 
         {/* TITLE */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-5">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
             Visual Results Dashboard
           </h1>
 
@@ -155,6 +155,7 @@ export default function ResultsGallery() {
             Ads
           </h2>
 
+          {/* SAMPLE SELECTOR */}
           <div className="flex flex-wrap justify-center gap-10 mb-20">
 
             {samples.map((sample) => (
@@ -163,21 +164,22 @@ export default function ResultsGallery() {
                 onClick={() => setSelectedSample(sample)}
                 className={`
                   w-[320px]
-                  border-[5px]
-                  p-4
                   bg-white
+                  rounded-3xl
+                  p-5
+                  shadow-md
                   cursor-pointer
-                  transition-all
+                  transition-all duration-300
 
                   ${
                     selectedSample.id === sample.id
-                      ? "border-black scale-105"
-                      : "border-gray-400"
+                      ? "ring-4 ring-black scale-105"
+                      : "hover:scale-105"
                   }
                 `}
               >
 
-                <h3 className="text-center text-2xl font-bold mb-5">
+                <h3 className="text-center text-3xl font-bold mb-6">
                   {sample.id}
                 </h3>
 
@@ -188,10 +190,8 @@ export default function ResultsGallery() {
                       key={index}
                       className={`
                         overflow-hidden
-                        border-[4px]
-                        border-black
                         rounded-2xl
-                        bg-gray-100
+                        bg-gray-200
 
                         ${index === 0 ? "h-20" : ""}
                         ${index === 1 ? "h-28 row-span-2" : ""}
@@ -201,81 +201,78 @@ export default function ResultsGallery() {
                         ${index === 5 ? "h-20" : ""}
                       `}
                     >
+
                       <img
                         src={img}
                         alt=""
                         className="w-full h-full object-cover"
                       />
+
                     </div>
                   ))}
 
                 </div>
+
               </div>
             ))}
 
           </div>
 
           {/* OUTPUTS */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
 
-            <div className="border-[5px] border-black bg-white p-5">
+            {["canvas", "depth", "images"].map((type) => (
 
-              <h3 className="text-center text-2xl font-bold mb-5">
-                canvas
-              </h3>
+              <div
+                key={type}
+                className="
+                  bg-white
+                  rounded-3xl
+                  p-6
+                  shadow-md
+                "
+              >
 
-              <div className="flex items-center justify-center bg-gray-100 min-h-[350px]">
-                <img
-                  src={selectedSample.outputs.canvas}
-                  alt=""
-                  className="max-w-full max-h-[500px] object-contain"
-                />
+                <h3 className="text-2xl font-bold text-center capitalize mb-6">
+                  {type}
+                </h3>
+
+                <div className="
+                  bg-gray-100
+                  rounded-2xl
+                  min-h-[350px]
+                  flex
+                  items-center
+                  justify-center
+                ">
+
+                  <img
+                    src={selectedSample.outputs[type]}
+                    alt=""
+                    className="max-w-full max-h-[500px] object-contain rounded-2xl"
+                  />
+
+                </div>
+
               </div>
 
-            </div>
-
-            <div className="border-[5px] border-black bg-white p-5">
-
-              <h3 className="text-center text-2xl font-bold mb-5">
-                depth
-              </h3>
-
-              <div className="flex items-center justify-center bg-gray-100 min-h-[350px]">
-                <img
-                  src={selectedSample.outputs.depth}
-                  alt=""
-                  className="max-w-full max-h-[500px] object-contain"
-                />
-              </div>
-
-            </div>
-
-            <div className="border-[5px] border-black bg-white p-5">
-
-              <h3 className="text-center text-2xl font-bold mb-5">
-                image
-              </h3>
-
-              <div className="flex items-center justify-center bg-gray-100 min-h-[350px]">
-                <img
-                  src={selectedSample.outputs.images}
-                  alt=""
-                  className="max-w-full max-h-[500px] object-contain"
-                />
-              </div>
-
-            </div>
+            ))}
 
           </div>
 
           {/* PROMPT */}
-          <div className="border-[5px] border-black bg-white p-10">
+          <div className="
+            bg-white
+            rounded-3xl
+            p-10
+            shadow-md
+          ">
 
             <h3 className="text-3xl font-bold mb-6">
-              prompts
+              PROMPT
             </h3>
 
-            <p className="text-xl md:text-2xl leading-relaxed">
+            <p className="text-2xl text-gray-700 leading-relaxed">
               {selectedSample.prompt}
             </p>
 
@@ -285,7 +282,7 @@ export default function ResultsGallery() {
 
         {/* ================= CINEMATIC SHOTS ================= */}
 
-        <section className="mb-24">
+        <section className="mb-32">
 
           <h2 className="text-4xl font-bold text-center mb-16">
             Cinematic Shots
@@ -300,20 +297,22 @@ export default function ResultsGallery() {
                 onClick={() => setSelectedCinematicSample(sample)}
                 className={`
                   w-[320px]
-                  border-[5px]
-                  p-4
                   bg-white
+                  rounded-3xl
+                  p-5
+                  shadow-md
                   cursor-pointer
+                  transition-all duration-300
 
                   ${
                     selectedCinematicSample.id === sample.id
-                      ? "border-black scale-105"
-                      : "border-gray-400"
+                      ? "ring-4 ring-black scale-105"
+                      : "hover:scale-105"
                   }
                 `}
               >
 
-                <h3 className="text-center text-2xl font-bold mb-5">
+                <h3 className="text-center text-3xl font-bold mb-6">
                   {sample.id}
                 </h3>
 
@@ -324,10 +323,8 @@ export default function ResultsGallery() {
                       key={index}
                       className={`
                         overflow-hidden
-                        border-[4px]
-                        border-black
                         rounded-2xl
-                        bg-gray-100
+                        bg-gray-200
 
                         ${index === 0 ? "h-20" : ""}
                         ${index === 1 ? "h-28 row-span-2" : ""}
@@ -355,23 +352,25 @@ export default function ResultsGallery() {
           </div>
 
           {/* STYLE BUTTONS */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-20">
 
             {cinematicStyles.map((style) => (
               <button
                 key={style}
                 onClick={() => setSelectedStyle(style)}
                 className={`
-                  border-[5px]
+                  rounded-2xl
                   bg-white
-                  py-10
+                  py-8
                   text-2xl
                   font-bold
+                  shadow-md
+                  transition-all duration-300
 
                   ${
                     selectedStyle === style
-                      ? "border-black"
-                      : "border-gray-400"
+                      ? "ring-4 ring-black scale-105"
+                      : "hover:scale-105"
                   }
                 `}
               >
@@ -382,7 +381,13 @@ export default function ResultsGallery() {
           </div>
 
           {/* PROMPT */}
-          <div className="border-[5px] border-black bg-white p-10 mb-16">
+          <div className="
+            bg-white
+            rounded-3xl
+            p-10
+            shadow-md
+            mb-16
+          ">
 
             <div className="grid md:grid-cols-3 gap-8 items-center">
 
@@ -390,7 +395,7 @@ export default function ResultsGallery() {
                 {selectedStyle} PROMPT
               </div>
 
-              <div className="md:col-span-2 text-2xl leading-relaxed">
+              <div className="md:col-span-2 text-2xl text-gray-700 leading-relaxed">
 
                 {selectedStyle === "HORROR" &&
                   "Dark abandoned mansion, cinematic horror atmosphere, fog, dramatic shadows, eerie lighting, ultra realistic movie scene."}
@@ -417,23 +422,31 @@ export default function ResultsGallery() {
           </div>
 
           {/* OUTPUT */}
-          <div>
+          <div className="
+            bg-white
+            rounded-3xl
+            p-8
+            shadow-md
+          ">
 
-            <h3 className="text-3xl font-bold mb-8">
+            <h3 className="text-3xl font-bold text-center mb-8">
               OUTPUT
             </h3>
 
-            <div className="border-[5px] border-black bg-white p-6">
+            <div className="
+              bg-gray-100
+              rounded-2xl
+              min-h-[500px]
+              flex
+              items-center
+              justify-center
+            ">
 
-              <div className="bg-gray-100 flex items-center justify-center min-h-[500px]">
-
-                <img
-                  src={`https://picsum.photos/1200/700?random=${selectedStyle}`}
-                  alt=""
-                  className="max-w-full max-h-[700px] object-contain"
-                />
-
-              </div>
+              <img
+                src={`https://picsum.photos/1200/700?random=${selectedStyle}`}
+                alt=""
+                className="max-w-full max-h-[700px] object-contain rounded-2xl"
+              />
 
             </div>
 
@@ -443,258 +456,202 @@ export default function ResultsGallery() {
 
         {/* ================= CULTURAL SHOTS ================= */}
 
-        <section className="mb-24 mt-32">
+        <section className="mb-24">
 
-          <h2 className="text-4xl font-bold text-center mb-16">
+          <h2 className="text-4xl font-bold text-center mb-20">
             Cultural Shots
           </h2>
 
-          {/* SAMPLE SELECTOR */}
-          <div className="flex flex-wrap justify-center gap-10 mb-16">
+          {/* PAIRS */}
+          <div className="grid md:grid-cols-2 gap-10 mb-24">
 
-            {["S1", "S2", "S3"].map((sample) => (
+            {[
+              {
+                actor: {
+                  name: "Actor 1",
+                  img: "https://picsum.photos/300?101",
+                },
+                culture: {
+                  name: "Culture 1",
+                  img: "https://picsum.photos/300?201",
+                },
+              },
+
+              {
+                actor: {
+                  name: "Actor 2",
+                  img: "https://picsum.photos/300?102",
+                },
+                culture: {
+                  name: "Culture 2",
+                  img: "https://picsum.photos/300?202",
+                },
+              },
+
+              {
+                actor: {
+                  name: "Actor 3",
+                  img: "https://picsum.photos/300?103",
+                },
+                culture: {
+                  name: "Culture 3",
+                  img: "https://picsum.photos/300?203",
+                },
+              },
+
+              {
+                actor: {
+                  name: "Actor 4",
+                  img: "https://picsum.photos/300?104",
+                },
+                culture: {
+                  name: "Culture 4",
+                  img: "https://picsum.photos/300?204",
+                },
+              },
+
+            ].map((pair, index) => (
+
               <div
-                key={sample}
-                className="w-[280px] border-[5px] border-black p-4 bg-white"
+                key={index}
+                className="
+                  bg-white
+                  rounded-3xl
+                  p-6
+                  shadow-md
+                  flex
+                  items-center
+                  justify-center
+                  gap-6
+                "
               >
 
-                <h3 className="text-center text-2xl font-bold mb-5">
-                  {sample}
-                </h3>
+                {/* ACTOR */}
+                <div
+                  onClick={() => setSelectedActor(pair.actor)}
+                  className={`
+                    cursor-pointer
+                    rounded-2xl
+                    overflow-hidden
+                    shadow-sm
+                    transition-all duration-300
 
-                <div className="grid grid-cols-3 gap-3">
+                    ${
+                      selectedActor?.name === pair.actor.name
+                        ? "ring-4 ring-black scale-105"
+                        : "hover:scale-105"
+                    }
+                  `}
+                >
 
-                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+                  <img
+                    src={pair.actor.img}
+                    alt=""
+                    className="w-40 h-40 object-cover"
+                  />
 
-                  <div className="border-[4px] border-black rounded-2xl h-28 row-span-2"></div>
+                  <div className="text-center text-lg font-semibold py-3 bg-white">
+                    {pair.actor.name}
+                  </div>
 
-                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+                </div>
 
-                  <div className="border-[4px] border-black rounded-2xl h-28"></div>
+                {/* PLUS */}
+                <div className="text-4xl font-light">
+                  +
+                </div>
 
-                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+                {/* CULTURE */}
+                <div
+                  onClick={() => setSelectedCulture(pair.culture)}
+                  className={`
+                    cursor-pointer
+                    rounded-2xl
+                    overflow-hidden
+                    shadow-sm
+                    transition-all duration-300
 
-                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+                    ${
+                      selectedCulture?.name === pair.culture.name
+                        ? "ring-4 ring-black scale-105"
+                        : "hover:scale-105"
+                    }
+                  `}
+                >
+
+                  <img
+                    src={pair.culture.img}
+                    alt=""
+                    className="w-40 h-40 object-cover"
+                  />
+
+                  <div className="text-center text-lg font-semibold py-3 bg-white">
+                    {pair.culture.name}
+                  </div>
 
                 </div>
 
               </div>
+
             ))}
 
           </div>
 
-          {/* ACTOR + CULTURE GRIDS */}
-          <div className="flex flex-wrap justify-center gap-10 mb-16">
-
-            {/* ACTORS */}
-            <div className="border-[5px] border-black bg-white p-4">
-
-              <div className="grid grid-cols-2 gap-4">
-
-                {[
-                  {
-                    name: "Actor 1",
-                    img: "https://picsum.photos/300?101",
-                  },
-
-                  {
-                    name: "Actor 2",
-                    img: "https://picsum.photos/300?102",
-                  },
-
-                  {
-                    name: "Actor 3",
-                    img: "https://picsum.photos/300?103",
-                  },
-
-                  {
-                    name: "Actor 4",
-                    img: "https://picsum.photos/300?104",
-                  },
-
-                ].map((actor) => (
-
-                  <div
-                    key={actor.name}
-                    onClick={() => setSelectedActor(actor)}
-                    className={`
-                      border-[5px]
-                      cursor-pointer
-                      overflow-hidden
-                      w-[170px]
-
-                      ${
-                        selectedActor?.name === actor.name
-                          ? "border-black"
-                          : "border-gray-400"
-                      }
-                    `}
-                  >
-
-                    <img
-                      src={actor.img}
-                      alt=""
-                      className="w-full h-40 object-cover"
-                    />
-
-                    <div className="text-center text-xl font-bold p-3">
-                      {actor.name}
-                    </div>
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-            {/* CULTURES */}
-            <div className="border-[5px] border-black bg-white p-4">
-
-              <div className="grid grid-cols-2 gap-4">
-
-                {[
-                  {
-                    name: "Culture 1",
-                    img: "https://picsum.photos/300?201",
-                  },
-
-                  {
-                    name: "Culture 2",
-                    img: "https://picsum.photos/300?202",
-                  },
-
-                  {
-                    name: "Culture 3",
-                    img: "https://picsum.photos/300?203",
-                  },
-
-                  {
-                    name: "Culture 4",
-                    img: "https://picsum.photos/300?204",
-                  },
-
-                ].map((culture) => (
-
-                  <div
-                    key={culture.name}
-                    onClick={() => setSelectedCulture(culture)}
-                    className={`
-                      border-[5px]
-                      cursor-pointer
-                      overflow-hidden
-                      w-[170px]
-
-                      ${
-                        selectedCulture?.name === culture.name
-                          ? "border-black"
-                          : "border-gray-400"
-                      }
-                    `}
-                  >
-
-                    <img
-                      src={culture.img}
-                      alt=""
-                      className="w-full h-40 object-cover"
-                    />
-
-                    <div className="text-center text-xl font-bold p-3">
-                      {culture.name}
-                    </div>
-
-                  </div>
-
-                ))}
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* SELECTED */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mb-16">
-
-            {/* ACTOR */}
-            <div className="border-[5px] border-black bg-white p-4 w-[220px]">
-
-              {selectedActor && (
-                <>
-                  <img
-                    src={selectedActor.img}
-                    alt=""
-                    className="w-full h-40 object-cover mb-4"
-                  />
-
-                  <div className="text-center text-2xl font-bold">
-                    {selectedActor.name}
-                  </div>
-                </>
-              )}
-
-            </div>
-
-            <div className="text-5xl font-bold">
-              +
-            </div>
-
-            {/* CULTURE */}
-            <div className="border-[5px] border-black bg-white p-4 w-[220px]">
-
-              {selectedCulture && (
-                <>
-                  <img
-                    src={selectedCulture.img}
-                    alt=""
-                    className="w-full h-40 object-cover mb-4"
-                  />
-
-                  <div className="text-center text-2xl font-bold">
-                    {selectedCulture.name}
-                  </div>
-                </>
-              )}
-
-            </div>
-
-          </div>
-
           {/* OUTPUT */}
-          <div className="border-[5px] border-black bg-white p-6 mb-16">
+          <div className="max-w-3xl mx-auto mb-20">
 
-            <h3 className="text-3xl font-bold mb-6 text-center">
-              OUTPUT IMAGE
-            </h3>
+            <div className="
+              bg-white
+              rounded-3xl
+              p-8
+              shadow-md
+            ">
 
-            <div className="bg-gray-100 min-h-[650px] flex items-center justify-center">
+              <h3 className="text-3xl font-bold text-center mb-8">
+                OUTPUT IMAGE
+              </h3>
 
-              <img
-                src={`https://picsum.photos/1000/700?random=${
-                  selectedActor?.name || "actor"
-                }${selectedCulture?.name || "culture"}`}
-                alt=""
-                className="max-w-full max-h-[700px] object-contain"
-              />
+              <div className="
+                bg-gray-100
+                rounded-2xl
+                min-h-[500px]
+                flex
+                items-center
+                justify-center
+              ">
+
+                <img
+                  src={`https://picsum.photos/1000/700?random=${
+                    selectedActor?.name || "actor"
+                  }${selectedCulture?.name || "culture"}`}
+                  alt=""
+                  className="max-w-full max-h-[650px] object-contain rounded-2xl"
+                />
+
+              </div>
 
             </div>
 
           </div>
 
           {/* PROMPT */}
-          <div className="border-[5px] border-black bg-white p-8">
+          <div className="
+            bg-white
+            rounded-3xl
+            p-10
+            shadow-md
+          ">
 
             <h3 className="text-3xl font-bold mb-6">
-              prompt
+              PROMPT
             </h3>
 
-            <p className="text-2xl leading-relaxed">
+            <p className="text-2xl leading-relaxed text-gray-700">
 
               A cinematic cultural composition featuring
 
               {" "}
-              <span className="font-bold">
+              <span className="font-bold text-black">
                 {selectedActor?.name || "Actor"}
               </span>
 
@@ -702,7 +659,7 @@ export default function ResultsGallery() {
               immersed in
 
               {" "}
-              <span className="font-bold">
+              <span className="font-bold text-black">
                 {selectedCulture?.name || "Culture"}
               </span>
 
