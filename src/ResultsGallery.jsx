@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function ResultsGallery() {
 
-  /* ---------------- ADS SECTION ---------------- */
+  /* ================= ADS SECTION ================= */
 
   const samples = [
     {
@@ -62,7 +62,7 @@ export default function ResultsGallery() {
 
   const [selectedSample, setSelectedSample] = useState(samples[0]);
 
-  /* ---------------- CINEMATIC SECTION ---------------- */
+  /* ================= CINEMATIC SECTION ================= */
 
   const cinematicSamples = [
     {
@@ -117,6 +117,18 @@ export default function ResultsGallery() {
   const [selectedStyle, setSelectedStyle] =
     useState(cinematicStyles[0]);
 
+  /* ================= CULTURAL SECTION ================= */
+
+  const [selectedActor, setSelectedActor] = useState({
+    name: "Actor 1",
+    img: "https://picsum.photos/300?101",
+  });
+
+  const [selectedCulture, setSelectedCulture] = useState({
+    name: "Culture 1",
+    img: "https://picsum.photos/300?201",
+  });
+
   return (
     <div className="min-h-screen bg-[#f5f5f5] px-6 py-10">
 
@@ -124,6 +136,7 @@ export default function ResultsGallery() {
 
         {/* TITLE */}
         <div className="text-center mb-20">
+
           <h1 className="text-5xl md:text-7xl font-bold mb-5">
             Visual Results Dashboard
           </h1>
@@ -131,6 +144,7 @@ export default function ResultsGallery() {
           <p className="text-gray-500 text-lg md:text-xl">
             Ads, cinematic shots and cultural shots viewer
           </p>
+
         </div>
 
         {/* ================= ADS ================= */}
@@ -141,7 +155,6 @@ export default function ResultsGallery() {
             Ads
           </h2>
 
-          {/* SAMPLE LAYOUTS */}
           <div className="flex flex-wrap justify-center gap-10 mb-20">
 
             {samples.map((sample) => (
@@ -168,7 +181,6 @@ export default function ResultsGallery() {
                   {sample.id}
                 </h3>
 
-                {/* CUSTOM GRID */}
                 <div className="grid grid-cols-3 gap-3">
 
                   {sample.grid.map((img, index) => (
@@ -206,7 +218,6 @@ export default function ResultsGallery() {
           {/* OUTPUTS */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-14">
 
-            {/* CANVAS */}
             <div className="border-[5px] border-black bg-white p-5">
 
               <h3 className="text-center text-2xl font-bold mb-5">
@@ -223,7 +234,6 @@ export default function ResultsGallery() {
 
             </div>
 
-            {/* DEPTH */}
             <div className="border-[5px] border-black bg-white p-5">
 
               <h3 className="text-center text-2xl font-bold mb-5">
@@ -240,7 +250,6 @@ export default function ResultsGallery() {
 
             </div>
 
-            {/* IMAGE */}
             <div className="border-[5px] border-black bg-white p-5">
 
               <h3 className="text-center text-2xl font-bold mb-5">
@@ -427,6 +436,282 @@ export default function ResultsGallery() {
               </div>
 
             </div>
+
+          </div>
+
+        </section>
+
+        {/* ================= CULTURAL SHOTS ================= */}
+
+        <section className="mb-24 mt-32">
+
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Cultural Shots
+          </h2>
+
+          {/* SAMPLE SELECTOR */}
+          <div className="flex flex-wrap justify-center gap-10 mb-16">
+
+            {["S1", "S2", "S3"].map((sample) => (
+              <div
+                key={sample}
+                className="w-[280px] border-[5px] border-black p-4 bg-white"
+              >
+
+                <h3 className="text-center text-2xl font-bold mb-5">
+                  {sample}
+                </h3>
+
+                <div className="grid grid-cols-3 gap-3">
+
+                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+
+                  <div className="border-[4px] border-black rounded-2xl h-28 row-span-2"></div>
+
+                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+
+                  <div className="border-[4px] border-black rounded-2xl h-28"></div>
+
+                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+
+                  <div className="border-[4px] border-black rounded-2xl h-20"></div>
+
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+          {/* ACTOR + CULTURE GRIDS */}
+          <div className="flex flex-wrap justify-center gap-10 mb-16">
+
+            {/* ACTORS */}
+            <div className="border-[5px] border-black bg-white p-4">
+
+              <div className="grid grid-cols-2 gap-4">
+
+                {[
+                  {
+                    name: "Actor 1",
+                    img: "https://picsum.photos/300?101",
+                  },
+
+                  {
+                    name: "Actor 2",
+                    img: "https://picsum.photos/300?102",
+                  },
+
+                  {
+                    name: "Actor 3",
+                    img: "https://picsum.photos/300?103",
+                  },
+
+                  {
+                    name: "Actor 4",
+                    img: "https://picsum.photos/300?104",
+                  },
+
+                ].map((actor) => (
+
+                  <div
+                    key={actor.name}
+                    onClick={() => setSelectedActor(actor)}
+                    className={`
+                      border-[5px]
+                      cursor-pointer
+                      overflow-hidden
+                      w-[170px]
+
+                      ${
+                        selectedActor?.name === actor.name
+                          ? "border-black"
+                          : "border-gray-400"
+                      }
+                    `}
+                  >
+
+                    <img
+                      src={actor.img}
+                      alt=""
+                      className="w-full h-40 object-cover"
+                    />
+
+                    <div className="text-center text-xl font-bold p-3">
+                      {actor.name}
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+            {/* CULTURES */}
+            <div className="border-[5px] border-black bg-white p-4">
+
+              <div className="grid grid-cols-2 gap-4">
+
+                {[
+                  {
+                    name: "Culture 1",
+                    img: "https://picsum.photos/300?201",
+                  },
+
+                  {
+                    name: "Culture 2",
+                    img: "https://picsum.photos/300?202",
+                  },
+
+                  {
+                    name: "Culture 3",
+                    img: "https://picsum.photos/300?203",
+                  },
+
+                  {
+                    name: "Culture 4",
+                    img: "https://picsum.photos/300?204",
+                  },
+
+                ].map((culture) => (
+
+                  <div
+                    key={culture.name}
+                    onClick={() => setSelectedCulture(culture)}
+                    className={`
+                      border-[5px]
+                      cursor-pointer
+                      overflow-hidden
+                      w-[170px]
+
+                      ${
+                        selectedCulture?.name === culture.name
+                          ? "border-black"
+                          : "border-gray-400"
+                      }
+                    `}
+                  >
+
+                    <img
+                      src={culture.img}
+                      alt=""
+                      className="w-full h-40 object-cover"
+                    />
+
+                    <div className="text-center text-xl font-bold p-3">
+                      {culture.name}
+                    </div>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* SELECTED */}
+          <div className="flex flex-wrap items-center justify-center gap-8 mb-16">
+
+            {/* ACTOR */}
+            <div className="border-[5px] border-black bg-white p-4 w-[220px]">
+
+              {selectedActor && (
+                <>
+                  <img
+                    src={selectedActor.img}
+                    alt=""
+                    className="w-full h-40 object-cover mb-4"
+                  />
+
+                  <div className="text-center text-2xl font-bold">
+                    {selectedActor.name}
+                  </div>
+                </>
+              )}
+
+            </div>
+
+            <div className="text-5xl font-bold">
+              +
+            </div>
+
+            {/* CULTURE */}
+            <div className="border-[5px] border-black bg-white p-4 w-[220px]">
+
+              {selectedCulture && (
+                <>
+                  <img
+                    src={selectedCulture.img}
+                    alt=""
+                    className="w-full h-40 object-cover mb-4"
+                  />
+
+                  <div className="text-center text-2xl font-bold">
+                    {selectedCulture.name}
+                  </div>
+                </>
+              )}
+
+            </div>
+
+          </div>
+
+          {/* OUTPUT */}
+          <div className="border-[5px] border-black bg-white p-6 mb-16">
+
+            <h3 className="text-3xl font-bold mb-6 text-center">
+              OUTPUT IMAGE
+            </h3>
+
+            <div className="bg-gray-100 min-h-[650px] flex items-center justify-center">
+
+              <img
+                src={`https://picsum.photos/1000/700?random=${
+                  selectedActor?.name || "actor"
+                }${selectedCulture?.name || "culture"}`}
+                alt=""
+                className="max-w-full max-h-[700px] object-contain"
+              />
+
+            </div>
+
+          </div>
+
+          {/* PROMPT */}
+          <div className="border-[5px] border-black bg-white p-8">
+
+            <h3 className="text-3xl font-bold mb-6">
+              prompt
+            </h3>
+
+            <p className="text-2xl leading-relaxed">
+
+              A cinematic cultural composition featuring
+
+              {" "}
+              <span className="font-bold">
+                {selectedActor?.name || "Actor"}
+              </span>
+
+              {" "}
+              immersed in
+
+              {" "}
+              <span className="font-bold">
+                {selectedCulture?.name || "Culture"}
+              </span>
+
+              {" "}
+              environment with dramatic storytelling,
+              realistic lighting, emotional atmosphere,
+              movie-grade visual composition and ultra detailed cinematic aesthetics.
+
+            </p>
 
           </div>
 
