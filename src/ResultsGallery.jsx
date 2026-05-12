@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 export default function ResultsGallery() {
+
+  /* ---------------- ADS SECTION ---------------- */
+
   const samples = [
     {
       id: "S1",
@@ -59,6 +62,61 @@ export default function ResultsGallery() {
 
   const [selectedSample, setSelectedSample] = useState(samples[0]);
 
+  /* ---------------- CINEMATIC SECTION ---------------- */
+
+  const cinematicSamples = [
+    {
+      id: "S1",
+      layouts: [
+        "https://picsum.photos/300?31",
+        "https://picsum.photos/300?32",
+        "https://picsum.photos/300?33",
+        "https://picsum.photos/300?34",
+        "https://picsum.photos/300?35",
+        "https://picsum.photos/300?36",
+      ],
+    },
+
+    {
+      id: "S2",
+      layouts: [
+        "https://picsum.photos/300?41",
+        "https://picsum.photos/300?42",
+        "https://picsum.photos/300?43",
+        "https://picsum.photos/300?44",
+        "https://picsum.photos/300?45",
+        "https://picsum.photos/300?46",
+      ],
+    },
+
+    {
+      id: "S3",
+      layouts: [
+        "https://picsum.photos/300?51",
+        "https://picsum.photos/300?52",
+        "https://picsum.photos/300?53",
+        "https://picsum.photos/300?54",
+        "https://picsum.photos/300?55",
+        "https://picsum.photos/300?56",
+      ],
+    },
+  ];
+
+  const cinematicStyles = [
+    "HORROR",
+    "COMIC",
+    "TRAGEDY",
+    "SPACE",
+    "CINEMATIC",
+    "INDIA",
+  ];
+
+  const [selectedCinematicSample, setSelectedCinematicSample] =
+    useState(cinematicSamples[0]);
+
+  const [selectedStyle, setSelectedStyle] =
+    useState(cinematicStyles[0]);
+
   return (
     <div className="min-h-screen bg-[#f5f5f5] px-6 py-10">
 
@@ -75,8 +133,9 @@ export default function ResultsGallery() {
           </p>
         </div>
 
-        {/* ADS */}
-        <section className="mb-24">
+        {/* ================= ADS ================= */}
+
+        <section className="mb-32">
 
           <h2 className="text-4xl font-bold text-center mb-16">
             Ads
@@ -151,7 +210,7 @@ export default function ResultsGallery() {
             <div className="border-[5px] border-black bg-white p-5">
 
               <h3 className="text-center text-2xl font-bold mb-5">
-                canvas 
+                canvas
               </h3>
 
               <div className="flex items-center justify-center bg-gray-100 min-h-[350px]">
@@ -185,7 +244,7 @@ export default function ResultsGallery() {
             <div className="border-[5px] border-black bg-white p-5">
 
               <h3 className="text-center text-2xl font-bold mb-5">
-                image 
+                image
               </h3>
 
               <div className="flex items-center justify-center bg-gray-100 min-h-[350px]">
@@ -210,6 +269,164 @@ export default function ResultsGallery() {
             <p className="text-xl md:text-2xl leading-relaxed">
               {selectedSample.prompt}
             </p>
+
+          </div>
+
+        </section>
+
+        {/* ================= CINEMATIC SHOTS ================= */}
+
+        <section className="mb-24">
+
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Cinematic Shots
+          </h2>
+
+          {/* SAMPLE SELECTOR */}
+          <div className="flex flex-wrap justify-center gap-10 mb-20">
+
+            {cinematicSamples.map((sample) => (
+              <div
+                key={sample.id}
+                onClick={() => setSelectedCinematicSample(sample)}
+                className={`
+                  w-[320px]
+                  border-[5px]
+                  p-4
+                  bg-white
+                  cursor-pointer
+
+                  ${
+                    selectedCinematicSample.id === sample.id
+                      ? "border-black scale-105"
+                      : "border-gray-400"
+                  }
+                `}
+              >
+
+                <h3 className="text-center text-2xl font-bold mb-5">
+                  {sample.id}
+                </h3>
+
+                <div className="grid grid-cols-3 gap-3">
+
+                  {sample.layouts.map((img, index) => (
+                    <div
+                      key={index}
+                      className={`
+                        overflow-hidden
+                        border-[4px]
+                        border-black
+                        rounded-2xl
+                        bg-gray-100
+
+                        ${index === 0 ? "h-20" : ""}
+                        ${index === 1 ? "h-28 row-span-2" : ""}
+                        ${index === 2 ? "h-20" : ""}
+                        ${index === 3 ? "h-28" : ""}
+                        ${index === 4 ? "h-20" : ""}
+                        ${index === 5 ? "h-20" : ""}
+                      `}
+                    >
+
+                      <img
+                        src={img}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
+
+                    </div>
+                  ))}
+
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+          {/* STYLE BUTTONS */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-10 mb-16">
+
+            {cinematicStyles.map((style) => (
+              <button
+                key={style}
+                onClick={() => setSelectedStyle(style)}
+                className={`
+                  border-[5px]
+                  bg-white
+                  py-10
+                  text-2xl
+                  font-bold
+
+                  ${
+                    selectedStyle === style
+                      ? "border-black"
+                      : "border-gray-400"
+                  }
+                `}
+              >
+                {style}
+              </button>
+            ))}
+
+          </div>
+
+          {/* PROMPT */}
+          <div className="border-[5px] border-black bg-white p-10 mb-16">
+
+            <div className="grid md:grid-cols-3 gap-8 items-center">
+
+              <div className="text-3xl font-bold">
+                {selectedStyle} PROMPT
+              </div>
+
+              <div className="md:col-span-2 text-2xl leading-relaxed">
+
+                {selectedStyle === "HORROR" &&
+                  "Dark abandoned mansion, cinematic horror atmosphere, fog, dramatic shadows, eerie lighting, ultra realistic movie scene."}
+
+                {selectedStyle === "COMIC" &&
+                  "Stylized comic-book scene with vibrant colors, exaggerated action pose, dynamic framing, graphic novel aesthetic."}
+
+                {selectedStyle === "TRAGEDY" &&
+                  "Emotional cinematic scene with rain, sorrowful atmosphere, soft lighting, dramatic storytelling composition."}
+
+                {selectedStyle === "SPACE" &&
+                  "Futuristic outer space environment, glowing nebula, astronauts, sci-fi cinematic visuals, ultra detailed galaxy backdrop."}
+
+                {selectedStyle === "CINEMATIC" &&
+                  "Movie-grade cinematic frame with volumetric lighting, realistic shadows, dramatic composition and immersive storytelling."}
+
+                {selectedStyle === "INDIA" &&
+                  "Indian cultural cinematic scene with vibrant festival atmosphere, traditional clothing, warm lighting and authentic environment."}
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* OUTPUT */}
+          <div>
+
+            <h3 className="text-3xl font-bold mb-8">
+              OUTPUT
+            </h3>
+
+            <div className="border-[5px] border-black bg-white p-6">
+
+              <div className="bg-gray-100 flex items-center justify-center min-h-[500px]">
+
+                <img
+                  src={`https://picsum.photos/1200/700?random=${selectedStyle}`}
+                  alt=""
+                  className="max-w-full max-h-[700px] object-contain"
+                />
+
+              </div>
+
+            </div>
 
           </div>
 
