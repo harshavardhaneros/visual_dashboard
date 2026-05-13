@@ -35,12 +35,12 @@ Error generating stack: `+e.message+`
               `,children:`Parth Shinde¹²`}),(0,T.jsx)(`a`,{href:`https://example.com/harsha`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
                 hover:underline\r
                 transition-all\r
-              `,children:`Jinka Harshavardhan²³`})]}),(0,T.jsxs)(`div`,{className:`\r
+              `,children:`Jinka Harshavardhan¹³`})]}),(0,T.jsxs)(`div`,{className:`\r
               text-2xl\r
               text-gray-700\r
               leading-relaxed\r
               mb-5\r
-            `,children:[(0,T.jsx)(`span`,{className:`mr-6`,children:`¹ IIT Madras`}),(0,T.jsx)(`span`,{className:`mr-6`,children:`² EROS NOW`}),(0,T.jsx)(`span`,{children:`³ SRMIST`})]}),(0,T.jsx)(`div`,{className:`text-3xl font-semibold mb-14`,children:`BMVC 2026`}),(0,T.jsxs)(`div`,{className:`\r
+            `,children:[(0,T.jsx)(`span`,{className:`mr-6`,children:`¹ EROS NOW`}),(0,T.jsx)(`span`,{className:`mr-6`,children:`² IIT Madras`}),(0,T.jsx)(`span`,{children:`³ SRMIST`})]}),(0,T.jsx)(`div`,{className:`text-3xl font-semibold mb-14`,children:`BMVC 2026`}),(0,T.jsxs)(`div`,{className:`\r
               flex\r
               flex-wrap\r
               justify-center\r
