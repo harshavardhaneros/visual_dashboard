@@ -107,6 +107,7 @@ export default function ResultsGallery() {
 
         <div className="max-w-7xl mx-auto text-center">
 
+          {/* TITLE */}
           <h1
             className="
               text-4xl
@@ -136,10 +137,55 @@ export default function ResultsGallery() {
               mb-6
             "
           >
-            <span>Kuppa Sai Sri Teja¹</span>
-            <span>Priyadarsan B¹²</span>
-            <span>Parth Shinde¹²</span>
-            <span>Jinka Harshavardhan²³</span>
+
+            <a
+              href="https://example.com/teja"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                hover:underline
+                transition-all
+              "
+            >
+              Kuppa Sai Sri Teja¹
+            </a>
+
+            <a
+              href="https://example.com/priyadarsan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                hover:underline
+                transition-all
+              "
+            >
+              Priyadarsan B¹²
+            </a>
+
+            <a
+              href="https://example.com/parth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                hover:underline
+                transition-all
+              "
+            >
+              Parth Shinde¹²
+            </a>
+
+            <a
+              href="https://example.com/harsha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                hover:underline
+                transition-all
+              "
+            >
+              Jinka Harshavardhan²³
+            </a>
+
           </div>
 
           {/* INSTITUTIONS */}
@@ -151,14 +197,8 @@ export default function ResultsGallery() {
               mb-5
             "
           >
-            <span className="mr-6">
-              ¹ IIT Madras
-            </span>
-
-            <span className="mr-6">
-              ² EROS NOW
-            </span>
-
+            <span className="mr-6">¹ IIT Madras</span>
+            <span className="mr-6">² EROS NOW</span>
             <span>³ SRMIST</span>
           </div>
 
@@ -166,7 +206,7 @@ export default function ResultsGallery() {
             BMVC 2026
           </div>
 
-          {/* BUTTONS */}
+          {/* TOP BUTTONS */}
           <div
             className="
               flex
@@ -182,10 +222,15 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
-                shadow-md flex items-center gap-2 md:gap-3
-                text-base md:text-xl font-medium
-                hover:scale-105 hover:shadow-lg
+                bg-white rounded-full
+                px-6 md:px-8
+                py-3 md:py-4
+                shadow-md
+                flex items-center gap-2 md:gap-3
+                text-base md:text-xl
+                font-medium
+                hover:scale-105
+                hover:shadow-lg
                 transition-all duration-300
               "
             >
@@ -198,10 +243,15 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
-                shadow-md flex items-center gap-2 md:gap-3
-                text-base md:text-xl font-medium
-                hover:scale-105 hover:shadow-lg
+                bg-white rounded-full
+                px-6 md:px-8
+                py-3 md:py-4
+                shadow-md
+                flex items-center gap-2 md:gap-3
+                text-base md:text-xl
+                font-medium
+                hover:scale-105
+                hover:shadow-lg
                 transition-all duration-300
               "
             >
@@ -214,10 +264,15 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
-                shadow-md flex items-center gap-2 md:gap-3
-                text-base md:text-xl font-medium
-                hover:scale-105 hover:shadow-lg
+                bg-white rounded-full
+                px-6 md:px-8
+                py-3 md:py-4
+                shadow-md
+                flex items-center gap-2 md:gap-3
+                text-base md:text-xl
+                font-medium
+                hover:scale-105
+                hover:shadow-lg
                 transition-all duration-300
               "
             >
@@ -230,10 +285,15 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
-                shadow-md flex items-center gap-2 md:gap-3
-                text-base md:text-xl font-medium
-                hover:scale-105 hover:shadow-lg
+                bg-white rounded-full
+                px-6 md:px-8
+                py-3 md:py-4
+                shadow-md
+                flex items-center gap-2 md:gap-3
+                text-base md:text-xl
+                font-medium
+                hover:scale-105
+                hover:shadow-lg
                 transition-all duration-300
               "
             >
@@ -255,7 +315,8 @@ export default function ResultsGallery() {
 
           <p
             className="
-              text-2xl md:text-3xl leading-relaxed mb-10
+              text-2xl md:text-3xl
+              leading-relaxed mb-10
             "
           >
             RefCompose enables controllable multi-reference image generation
@@ -264,28 +325,41 @@ export default function ResultsGallery() {
 
           <div
             className="
-              bg-white rounded-full shadow-md px-6 py-5
+              bg-white rounded-full shadow-md
+              px-6 py-5
               flex flex-wrap justify-center gap-10
             "
           >
 
             <a
               href="#ads"
-              className="text-xl font-semibold hover:text-blue-600 transition-all"
+              className="
+                text-xl font-semibold
+                hover:text-blue-600
+                transition-all
+              "
             >
               Ads Generation
             </a>
 
             <a
               href="#cinematic"
-              className="text-xl font-semibold hover:text-blue-600 transition-all"
+              className="
+                text-xl font-semibold
+                hover:text-blue-600
+                transition-all
+              "
             >
               Cinematic Shots
             </a>
 
             <a
               href="#cultural"
-              className="text-xl font-semibold hover:text-blue-600 transition-all"
+              className="
+                text-xl font-semibold
+                hover:text-blue-600
+                transition-all
+              "
             >
               Cultural Composition
             </a>
@@ -316,11 +390,12 @@ export default function ResultsGallery() {
               className={`
                 bg-white rounded-3xl p-5 shadow-md
                 cursor-pointer transition-all duration-300
+                hover:scale-[1.03] hover:shadow-xl
 
                 ${
                   selectedSample.id === sample.id
-                    ? "ring-4 ring-black scale-105"
-                    : "hover:scale-105"
+                    ? "ring-4 ring-black"
+                    : ""
                 }
               `}
             >
@@ -373,7 +448,10 @@ export default function ResultsGallery() {
 
             <div
               key={type}
-              className="bg-white rounded-3xl shadow-md p-6"
+              className="
+                bg-white rounded-3xl shadow-md p-6
+                hover:shadow-xl transition-all duration-300
+              "
             >
 
               <h3 className="text-2xl font-bold capitalize text-center mb-6">
@@ -382,7 +460,8 @@ export default function ResultsGallery() {
 
               <div
                 className="
-                  bg-gray-100 rounded-2xl min-h-[350px]
+                  bg-gray-100 rounded-2xl
+                  min-h-[350px]
                   flex items-center justify-center
                 "
               >
@@ -425,12 +504,15 @@ export default function ResultsGallery() {
               onClick={() => setSelectedStyle(style)}
               className={`
                 bg-white rounded-3xl py-10 text-2xl
-                font-semibold shadow-md transition-all duration-300
+                font-semibold shadow-md
+                transition-all duration-300
+                hover:scale-[1.03]
+                hover:shadow-xl
 
                 ${
                   selectedStyle === style
-                    ? "ring-4 ring-black scale-105"
-                    : "hover:scale-105"
+                    ? "ring-4 ring-black"
+                    : ""
                 }
               `}
             >
@@ -440,6 +522,7 @@ export default function ResultsGallery() {
 
         </div>
 
+        {/* PROMPT */}
         <div className="bg-white rounded-3xl p-10 shadow-md mb-16">
 
           <h3 className="text-3xl font-bold mb-6">
@@ -447,15 +530,21 @@ export default function ResultsGallery() {
           </h3>
 
           <p className="text-2xl text-gray-700 leading-relaxed">
+
             Cinematic scene generated in{" "}
+
             <span className="font-bold text-black">
               {selectedStyle}
-            </span>{" "}
-            style with movie-grade lighting and storytelling composition.
+            </span>
+
+            {" "}style with movie-grade lighting and
+            storytelling composition.
+
           </p>
 
         </div>
 
+        {/* OUTPUT */}
         <div className="bg-white rounded-3xl p-8 shadow-md">
 
           <h3 className="text-3xl font-bold text-center mb-8">
@@ -464,7 +553,8 @@ export default function ResultsGallery() {
 
           <div
             className="
-              bg-gray-100 rounded-2xl min-h-[550px]
+              bg-gray-100 rounded-2xl
+              min-h-[550px]
               flex items-center justify-center
             "
           >
@@ -549,18 +639,28 @@ export default function ResultsGallery() {
               className="
                 bg-white rounded-3xl p-6 shadow-md
                 flex items-center justify-center gap-6
+                transition-all duration-300
+                hover:scale-[1.03]
+                hover:shadow-xl
               "
             >
 
+              {/* ACTOR */}
               <div
                 onClick={() => setSelectedActor(pair.actor)}
-                className="cursor-pointer"
+                className="
+                  cursor-pointer
+                  transition-all duration-300
+                  hover:scale-105
+                "
               >
 
                 <img
                   src={pair.actor.img}
                   alt=""
-                  className="w-40 h-40 object-cover rounded-2xl"
+                  className="
+                    w-40 h-40 object-cover rounded-2xl
+                  "
                 />
 
                 <div className="text-center mt-3 text-lg font-semibold">
@@ -569,19 +669,26 @@ export default function ResultsGallery() {
 
               </div>
 
-              <div className="text-4xl">
+              <div className="text-4xl font-light">
                 +
               </div>
 
+              {/* CULTURE */}
               <div
                 onClick={() => setSelectedCulture(pair.culture)}
-                className="cursor-pointer"
+                className="
+                  cursor-pointer
+                  transition-all duration-300
+                  hover:scale-105
+                "
               >
 
                 <img
                   src={pair.culture.img}
                   alt=""
-                  className="w-40 h-40 object-cover rounded-2xl"
+                  className="
+                    w-40 h-40 object-cover rounded-2xl
+                  "
                 />
 
                 <div className="text-center mt-3 text-lg font-semibold">
@@ -610,7 +717,8 @@ export default function ResultsGallery() {
 
           <div
             className="
-              bg-gray-100 rounded-2xl min-h-[550px]
+              bg-gray-100 rounded-2xl
+              min-h-[550px]
               flex items-center justify-center
             "
           >
@@ -651,7 +759,8 @@ export default function ResultsGallery() {
               {selectedCulture?.name}
             </span>
 
-            {" "}environment with dramatic storytelling and realistic lighting.
+            {" "}environment with dramatic storytelling,
+            realistic lighting and movie-grade aesthetics.
 
           </p>
 
