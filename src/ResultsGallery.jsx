@@ -137,12 +137,10 @@ export default function ResultsGallery() {
               mb-6
             "
           >
-            <span>Alex Carter¹</span>
-            <span>Priya Sharma²</span>
-            <span>David Lin¹</span>
-            <span>Joon Park³</span>
-            <span>Maria Chen²</span>
-            <span>Ethan Walker¹</span>
+            <span>Kuppa Sai Sri Teja¹</span>
+            <span>Priyadarsan B¹²</span>
+            <span>Parth Shinde¹²</span>
+            <span>Jinka Harshavardhan²³</span>
           </div>
 
           {/* INSTITUTIONS */}
@@ -155,18 +153,18 @@ export default function ResultsGallery() {
             "
           >
             <span className="mr-6">
-              ¹ Vision AI Lab
+              ¹ IIT Madras
             </span>
 
             <span className="mr-6">
-              ² FutureGen Research
+              ² EROS NOW
             </span>
 
-            <span>³ Stanford AI</span>
+            <span>³ SRMIST</span>
           </div>
 
           <div className="text-3xl font-semibold mb-14">
-            CVPR 2026
+            BMVC 2026
           </div>
 
           {/* BUTTONS */}
@@ -180,7 +178,6 @@ export default function ResultsGallery() {
             "
           >
 
-            {/* PAPER */}
             <a
               href="https://arxiv.org/"
               target="_blank"
@@ -210,7 +207,6 @@ export default function ResultsGallery() {
               Paper
             </a>
 
-            {/* ARXIV */}
             <a
               href="https://arxiv.org/"
               target="_blank"
@@ -240,7 +236,6 @@ export default function ResultsGallery() {
               arXiv
             </a>
 
-            {/* VIDEO */}
             <a
               href="https://youtube.com/"
               target="_blank"
@@ -270,7 +265,6 @@ export default function ResultsGallery() {
               Video
             </a>
 
-            {/* BIBTEX */}
             <a
               href="https://scholar.google.com/"
               target="_blank"
@@ -388,38 +382,19 @@ export default function ResultsGallery() {
         className="max-w-7xl mx-auto px-6 mb-40"
       >
 
-        <h2
-          className="
-            text-5xl
-            font-semibold
-            text-center
-            mb-16
-          "
-        >
+        <h2 className="text-5xl font-semibold text-center mb-16">
           Ads Generation
         </h2>
 
-        {/* SAMPLE SELECTOR */}
-        <div
-          className="
-            grid
-            md:grid-cols-3
-            gap-10
-            mb-14
-          "
-        >
+        <div className="grid md:grid-cols-3 gap-10 mb-14">
 
           {samples.map((sample) => (
             <div
               key={sample.id}
               onClick={() => setSelectedSample(sample)}
               className={`
-                bg-white
-                rounded-3xl
-                p-5
-                shadow-md
-                cursor-pointer
-                transition-all duration-300
+                bg-white rounded-3xl p-5 shadow-md
+                cursor-pointer transition-all duration-300
 
                 ${
                   selectedSample.id === sample.id
@@ -429,14 +404,7 @@ export default function ResultsGallery() {
               `}
             >
 
-              <h3
-                className="
-                  text-3xl
-                  font-bold
-                  text-center
-                  mb-6
-                "
-              >
+              <h3 className="text-3xl font-bold text-center mb-6">
                 {sample.id}
               </h3>
 
@@ -446,8 +414,7 @@ export default function ResultsGallery() {
                   <div
                     key={index}
                     className={`
-                      overflow-hidden
-                      rounded-2xl
+                      overflow-hidden rounded-2xl
 
                       ${index === 0 ? "h-24" : ""}
                       ${index === 1 ? "h-32 row-span-2" : ""}
@@ -475,79 +442,37 @@ export default function ResultsGallery() {
         </div>
 
         {/* PROMPT */}
-        <div
-          className="
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-md
-            mb-16
-          "
-        >
+        <div className="bg-white rounded-3xl p-8 shadow-md mb-16">
 
-          <h3
-            className="
-              text-2xl
-              font-bold
-              mb-4
-            "
-          >
+          <h3 className="text-2xl font-bold mb-4">
             Prompt
           </h3>
 
-          <p
-            className="
-              text-xl
-              text-gray-700
-              leading-relaxed
-            "
-          >
+          <p className="text-xl text-gray-700 leading-relaxed">
             {selectedSample.prompt}
           </p>
 
         </div>
 
         {/* OUTPUTS */}
-        <div
-          className="
-            grid
-            lg:grid-cols-3
-            gap-10
-          "
-        >
+        <div className="grid lg:grid-cols-3 gap-10">
 
           {["canvas", "depth", "images"].map((type) => (
 
             <div
               key={type}
-              className="
-                bg-white
-                rounded-3xl
-                shadow-md
-                p-6
-              "
+              className="bg-white rounded-3xl shadow-md p-6"
             >
 
-              <h3
-                className="
-                  text-2xl
-                  font-bold
-                  capitalize
-                  text-center
-                  mb-6
-                "
-              >
+              <h3 className="text-2xl font-bold capitalize text-center mb-6">
                 {type}
               </h3>
 
               <div
                 className="
-                  bg-gray-100
-                  rounded-2xl
+                  bg-gray-100 rounded-2xl
                   min-h-[350px]
-                  flex
-                  items-center
-                  justify-center
+                  flex items-center justify-center
                 "
               >
 
@@ -579,39 +504,19 @@ export default function ResultsGallery() {
         className="max-w-7xl mx-auto px-6 mb-40"
       >
 
-        <h2
-          className="
-            text-5xl
-            font-semibold
-            text-center
-            mb-16
-          "
-        >
+        <h2 className="text-5xl font-semibold text-center mb-16">
           Cinematic Shots
         </h2>
 
-        {/* STYLE BUTTONS */}
-        <div
-          className="
-            grid
-            md:grid-cols-3
-            gap-8
-            mb-20
-          "
-        >
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
 
           {cinematicStyles.map((style) => (
             <button
               key={style}
               onClick={() => setSelectedStyle(style)}
               className={`
-                bg-white
-                rounded-3xl
-                py-10
-                text-2xl
-                font-semibold
-                shadow-md
-                transition-all duration-300
+                bg-white rounded-3xl py-10 text-2xl
+                font-semibold shadow-md transition-all duration-300
 
                 ${
                   selectedStyle === style
@@ -626,34 +531,13 @@ export default function ResultsGallery() {
 
         </div>
 
-        {/* PROMPT */}
-        <div
-          className="
-            bg-white
-            rounded-3xl
-            p-10
-            shadow-md
-            mb-16
-          "
-        >
+        <div className="bg-white rounded-3xl p-10 shadow-md mb-16">
 
-          <h3
-            className="
-              text-3xl
-              font-bold
-              mb-6
-            "
-          >
+          <h3 className="text-3xl font-bold mb-6">
             {selectedStyle} Prompt
           </h3>
 
-          <p
-            className="
-              text-2xl
-              text-gray-700
-              leading-relaxed
-            "
-          >
+          <p className="text-2xl text-gray-700 leading-relaxed">
 
             Cinematic scene generated in
 
@@ -670,35 +554,17 @@ export default function ResultsGallery() {
 
         </div>
 
-        {/* OUTPUT */}
-        <div
-          className="
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-md
-          "
-        >
+        <div className="bg-white rounded-3xl p-8 shadow-md">
 
-          <h3
-            className="
-              text-3xl
-              font-bold
-              text-center
-              mb-8
-            "
-          >
+          <h3 className="text-3xl font-bold text-center mb-8">
             Output
           </h3>
 
           <div
             className="
-              bg-gray-100
-              rounded-2xl
+              bg-gray-100 rounded-2xl
               min-h-[550px]
-              flex
-              items-center
-              justify-center
+              flex items-center justify-center
             "
           >
 
@@ -723,29 +589,15 @@ export default function ResultsGallery() {
 
       <section
         id="cultural"
-        className="max-w-7xl mx-auto px-6 pb-32"
+        className="max-w-7xl mx-auto px-6 pb-24"
       >
 
-        <h2
-          className="
-            text-5xl
-            font-semibold
-            text-center
-            mb-16
-          "
-        >
+        <h2 className="text-5xl font-semibold text-center mb-16">
           Cultural Composition
         </h2>
 
         {/* PAIRS */}
-        <div
-          className="
-            grid
-            md:grid-cols-2
-            gap-10
-            mb-24
-          "
-        >
+        <div className="grid md:grid-cols-2 gap-10 mb-24">
 
           {[
             {
@@ -797,14 +649,8 @@ export default function ResultsGallery() {
             <div
               key={index}
               className="
-                bg-white
-                rounded-3xl
-                p-6
-                shadow-md
-                flex
-                items-center
-                justify-center
-                gap-6
+                bg-white rounded-3xl p-6 shadow-md
+                flex items-center justify-center gap-6
               "
             >
 
@@ -812,9 +658,7 @@ export default function ResultsGallery() {
               <div
                 onClick={() => setSelectedActor(pair.actor)}
                 className={`
-                  rounded-2xl
-                  overflow-hidden
-                  cursor-pointer
+                  rounded-2xl overflow-hidden cursor-pointer
                   transition-all duration-300
 
                   ${
@@ -828,22 +672,10 @@ export default function ResultsGallery() {
                 <img
                   src={pair.actor.img}
                   alt=""
-                  className="
-                    w-40
-                    h-40
-                    object-cover
-                  "
+                  className="w-40 h-40 object-cover"
                 />
 
-                <div
-                  className="
-                    text-center
-                    py-3
-                    text-lg
-                    font-semibold
-                    bg-white
-                  "
-                >
+                <div className="text-center py-3 text-lg font-semibold bg-white">
                   {pair.actor.name}
                 </div>
 
@@ -857,9 +689,7 @@ export default function ResultsGallery() {
               <div
                 onClick={() => setSelectedCulture(pair.culture)}
                 className={`
-                  rounded-2xl
-                  overflow-hidden
-                  cursor-pointer
+                  rounded-2xl overflow-hidden cursor-pointer
                   transition-all duration-300
 
                   ${
@@ -873,22 +703,10 @@ export default function ResultsGallery() {
                 <img
                   src={pair.culture.img}
                   alt=""
-                  className="
-                    w-40
-                    h-40
-                    object-cover
-                  "
+                  className="w-40 h-40 object-cover"
                 />
 
-                <div
-                  className="
-                    text-center
-                    py-3
-                    text-lg
-                    font-semibold
-                    bg-white
-                  "
-                >
+                <div className="text-center py-3 text-lg font-semibold bg-white">
                   {pair.culture.name}
                 </div>
 
@@ -903,35 +721,20 @@ export default function ResultsGallery() {
         {/* OUTPUT */}
         <div
           className="
-            max-w-4xl
-            mx-auto
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-md
-            mb-20
+            max-w-4xl mx-auto bg-white
+            rounded-3xl p-8 shadow-md mb-20
           "
         >
 
-          <h3
-            className="
-              text-3xl
-              font-bold
-              text-center
-              mb-8
-            "
-          >
+          <h3 className="text-3xl font-bold text-center mb-8">
             Output Image
           </h3>
 
           <div
             className="
-              bg-gray-100
-              rounded-2xl
+              bg-gray-100 rounded-2xl
               min-h-[550px]
-              flex
-              items-center
-              justify-center
+              flex items-center justify-center
             "
           >
 
@@ -953,32 +756,13 @@ export default function ResultsGallery() {
         </div>
 
         {/* PROMPT */}
-        <div
-          className="
-            bg-white
-            rounded-3xl
-            p-10
-            shadow-md
-          "
-        >
+        <div className="bg-white rounded-3xl p-10 shadow-md mb-24">
 
-          <h3
-            className="
-              text-3xl
-              font-bold
-              mb-6
-            "
-          >
+          <h3 className="text-3xl font-bold mb-6">
             Prompt
           </h3>
 
-          <p
-            className="
-              text-2xl
-              text-gray-700
-              leading-relaxed
-            "
-          >
+          <p className="text-2xl text-gray-700 leading-relaxed">
 
             A cinematic cultural composition featuring
 
@@ -1000,6 +784,85 @@ export default function ResultsGallery() {
             realistic lighting and movie-grade aesthetics.
 
           </p>
+
+        </div>
+
+        {/* ================= REFERENCES ================= */}
+
+        <div className="bg-white rounded-3xl shadow-md p-10">
+
+          {/* REFERENCES */}
+          <h2 className="text-4xl font-semibold mb-8">
+            References
+          </h2>
+
+          <div
+            className="
+              text-xl text-gray-700
+              leading-relaxed space-y-5 mb-16
+            "
+          >
+
+            <p>
+              RefCompose: Multi-Reference Image Generation
+              via LoRA-Conditioned Diffusion.
+            </p>
+
+            <p>
+              BMVC 2026 Research Demonstration Website.
+            </p>
+
+          </div>
+
+          {/* CREDITS */}
+          <h2 className="text-4xl font-semibold mb-8">
+            Credits
+          </h2>
+
+          <div
+            className="
+              text-xl text-gray-700
+              leading-relaxed space-y-6
+            "
+          >
+
+            <div>
+
+              <p>
+                We acknowledge and credit the original authors
+                for the webpage design inspiration and presentation layout.
+              </p>
+
+            </div>
+
+            <div>
+
+              <p className="font-semibold mb-3">
+                Website Inspiration
+              </p>
+
+              <a
+                href="https://edit-by-track.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-blue-600
+                  hover:underline
+                  block
+                "
+              >
+                Edit-by-Track: Generative Video Motion Editing with 3D Point Tracks
+              </a>
+
+            </div>
+
+            <p>
+              This project webpage was designed for showcasing
+              research demonstrations, visual outputs and
+              multi-reference image generation results.
+            </p>
+
+          </div>
 
         </div>
 
