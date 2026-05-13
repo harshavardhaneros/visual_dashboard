@@ -23,12 +23,12 @@ Error generating stack: `+e.message+`
               text-[#4f6cff]\r
               text-xl\r
               mb-6\r
-            `,children:[(0,T.jsx)(`span`,{children:`Alex Carter¹`}),(0,T.jsx)(`span`,{children:`Priya Sharma²`}),(0,T.jsx)(`span`,{children:`David Lin¹`}),(0,T.jsx)(`span`,{children:`Joon Park³`}),(0,T.jsx)(`span`,{children:`Maria Chen²`}),(0,T.jsx)(`span`,{children:`Ethan Walker¹`})]}),(0,T.jsxs)(`div`,{className:`\r
+            `,children:[(0,T.jsx)(`span`,{children:`Kuppa Sai Sri Teja¹`}),(0,T.jsx)(`span`,{children:`Priyadarsan B¹²`}),(0,T.jsx)(`span`,{children:`Parth Shinde¹²`}),(0,T.jsx)(`span`,{children:`Jinka Harshavardhan²³`})]}),(0,T.jsxs)(`div`,{className:`\r
               text-2xl\r
               text-gray-700\r
               leading-relaxed\r
               mb-5\r
-            `,children:[(0,T.jsx)(`span`,{className:`mr-6`,children:`¹ Vision AI Lab`}),(0,T.jsx)(`span`,{className:`mr-6`,children:`² FutureGen Research`}),(0,T.jsx)(`span`,{children:`³ Stanford AI`})]}),(0,T.jsx)(`div`,{className:`text-3xl font-semibold mb-14`,children:`CVPR 2026`}),(0,T.jsxs)(`div`,{className:`\r
+            `,children:[(0,T.jsx)(`span`,{className:`mr-6`,children:`¹ IIT Madras`}),(0,T.jsx)(`span`,{className:`mr-6`,children:`² EROS NOW`}),(0,T.jsx)(`span`,{children:`³ SRMIST`})]}),(0,T.jsx)(`div`,{className:`text-3xl font-semibold mb-14`,children:`BMVC 2026`}),(0,T.jsxs)(`div`,{className:`\r
               flex\r
               flex-wrap\r
               justify-center\r
@@ -140,33 +140,13 @@ Error generating stack: `+e.message+`
                 font-semibold\r
                 hover:text-blue-600\r
                 transition-all\r
-              `,children:`Cultural Composition`})]})]})}),(0,T.jsxs)(`section`,{id:`ads`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`\r
-            text-5xl\r
-            font-semibold\r
-            text-center\r
-            mb-16\r
-          `,children:`Ads Generation`}),(0,T.jsx)(`div`,{className:`\r
-            grid\r
-            md:grid-cols-3\r
-            gap-10\r
-            mb-14\r
-          `,children:e.map(e=>(0,T.jsxs)(`div`,{onClick:()=>n(e),className:`
-                bg-white
-                rounded-3xl
-                p-5
-                shadow-md
-                cursor-pointer
-                transition-all duration-300
+              `,children:`Cultural Composition`})]})]})}),(0,T.jsxs)(`section`,{id:`ads`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Ads Generation`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-3 gap-10 mb-14`,children:e.map(e=>(0,T.jsxs)(`div`,{onClick:()=>n(e),className:`
+                bg-white rounded-3xl p-5 shadow-md
+                cursor-pointer transition-all duration-300
 
                 ${t.id===e.id?`ring-4 ring-black scale-105`:`hover:scale-105`}
-              `,children:[(0,T.jsx)(`h3`,{className:`\r
-                  text-3xl\r
-                  font-bold\r
-                  text-center\r
-                  mb-6\r
-                `,children:e.id}),(0,T.jsx)(`div`,{className:`grid grid-cols-3 gap-3`,children:e.grid.map((e,t)=>(0,T.jsx)(`div`,{className:`
-                      overflow-hidden
-                      rounded-2xl
+              `,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-6`,children:e.id}),(0,T.jsx)(`div`,{className:`grid grid-cols-3 gap-3`,children:e.grid.map((e,t)=>(0,T.jsx)(`div`,{className:`
+                      overflow-hidden rounded-2xl
 
                       ${t===0?`h-24`:``}
                       ${t===1?`h-32 row-span-2`:``}
@@ -174,192 +154,62 @@ Error generating stack: `+e.message+`
                       ${t===3?`h-32`:``}
                       ${t===4?`h-24`:``}
                       ${t===5?`h-24`:``}
-                    `,children:(0,T.jsx)(`img`,{src:e,alt:``,className:`w-full h-full object-cover`})},t))})]},e.id))}),(0,T.jsxs)(`div`,{className:`\r
-            bg-white\r
-            rounded-3xl\r
-            p-8\r
-            shadow-md\r
-            mb-16\r
-          `,children:[(0,T.jsx)(`h3`,{className:`\r
-              text-2xl\r
-              font-bold\r
-              mb-4\r
-            `,children:`Prompt`}),(0,T.jsx)(`p`,{className:`\r
-              text-xl\r
-              text-gray-700\r
-              leading-relaxed\r
-            `,children:t.prompt})]}),(0,T.jsx)(`div`,{className:`\r
-            grid\r
-            lg:grid-cols-3\r
-            gap-10\r
-          `,children:[`canvas`,`depth`,`images`].map(e=>(0,T.jsxs)(`div`,{className:`\r
-                bg-white\r
-                rounded-3xl\r
-                shadow-md\r
-                p-6\r
-              `,children:[(0,T.jsx)(`h3`,{className:`\r
-                  text-2xl\r
-                  font-bold\r
-                  capitalize\r
-                  text-center\r
-                  mb-6\r
-                `,children:e}),(0,T.jsx)(`div`,{className:`\r
-                  bg-gray-100\r
-                  rounded-2xl\r
+                    `,children:(0,T.jsx)(`img`,{src:e,alt:``,className:`w-full h-full object-cover`})},t))})]},e.id))}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-8 shadow-md mb-16`,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold mb-4`,children:`Prompt`}),(0,T.jsx)(`p`,{className:`text-xl text-gray-700 leading-relaxed`,children:t.prompt})]}),(0,T.jsx)(`div`,{className:`grid lg:grid-cols-3 gap-10`,children:[`canvas`,`depth`,`images`].map(e=>(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl shadow-md p-6`,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold capitalize text-center mb-6`,children:e}),(0,T.jsx)(`div`,{className:`\r
+                  bg-gray-100 rounded-2xl\r
                   min-h-[350px]\r
-                  flex\r
-                  items-center\r
-                  justify-center\r
+                  flex items-center justify-center\r
                 `,children:(0,T.jsx)(`img`,{src:t.outputs[e],alt:``,className:`\r
                     max-w-full\r
                     max-h-[500px]\r
                     object-contain\r
                     rounded-2xl\r
-                  `})})]},e))})]}),(0,T.jsxs)(`section`,{id:`cinematic`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`\r
-            text-5xl\r
-            font-semibold\r
-            text-center\r
-            mb-16\r
-          `,children:`Cinematic Shots`}),(0,T.jsx)(`div`,{className:`\r
-            grid\r
-            md:grid-cols-3\r
-            gap-8\r
-            mb-20\r
-          `,children:r.map(e=>(0,T.jsx)(`button`,{onClick:()=>a(e),className:`
-                bg-white
-                rounded-3xl
-                py-10
-                text-2xl
-                font-semibold
-                shadow-md
-                transition-all duration-300
+                  `})})]},e))})]}),(0,T.jsxs)(`section`,{id:`cinematic`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Cinematic Shots`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-3 gap-8 mb-20`,children:r.map(e=>(0,T.jsx)(`button`,{onClick:()=>a(e),className:`
+                bg-white rounded-3xl py-10 text-2xl
+                font-semibold shadow-md transition-all duration-300
 
                 ${i===e?`ring-4 ring-black scale-105`:`hover:scale-105`}
-              `,children:e},e))}),(0,T.jsxs)(`div`,{className:`\r
-            bg-white\r
-            rounded-3xl\r
-            p-10\r
-            shadow-md\r
-            mb-16\r
-          `,children:[(0,T.jsxs)(`h3`,{className:`\r
-              text-3xl\r
-              font-bold\r
-              mb-6\r
-            `,children:[i,` Prompt`]}),(0,T.jsxs)(`p`,{className:`\r
-              text-2xl\r
-              text-gray-700\r
-              leading-relaxed\r
-            `,children:[`Cinematic scene generated in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:i}),` `,`style with movie-grade lighting, storytelling composition and visually rich atmosphere.`]})]}),(0,T.jsxs)(`div`,{className:`\r
-            bg-white\r
-            rounded-3xl\r
-            p-8\r
-            shadow-md\r
-          `,children:[(0,T.jsx)(`h3`,{className:`\r
-              text-3xl\r
-              font-bold\r
-              text-center\r
-              mb-8\r
-            `,children:`Output`}),(0,T.jsx)(`div`,{className:`\r
-              bg-gray-100\r
-              rounded-2xl\r
+              `,children:e},e))}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-10 shadow-md mb-16`,children:[(0,T.jsxs)(`h3`,{className:`text-3xl font-bold mb-6`,children:[i,` Prompt`]}),(0,T.jsxs)(`p`,{className:`text-2xl text-gray-700 leading-relaxed`,children:[`Cinematic scene generated in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:i}),` `,`style with movie-grade lighting, storytelling composition and visually rich atmosphere.`]})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-8 shadow-md`,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-8`,children:`Output`}),(0,T.jsx)(`div`,{className:`\r
+              bg-gray-100 rounded-2xl\r
               min-h-[550px]\r
-              flex\r
-              items-center\r
-              justify-center\r
+              flex items-center justify-center\r
             `,children:(0,T.jsx)(`img`,{src:`https://picsum.photos/1200/700?random=${i}`,alt:``,className:`\r
                 max-w-full\r
                 max-h-[700px]\r
                 object-contain\r
                 rounded-2xl\r
-              `})})]})]}),(0,T.jsxs)(`section`,{id:`cultural`,className:`max-w-7xl mx-auto px-6 pb-32`,children:[(0,T.jsx)(`h2`,{className:`\r
-            text-5xl\r
-            font-semibold\r
-            text-center\r
-            mb-16\r
-          `,children:`Cultural Composition`}),(0,T.jsx)(`div`,{className:`\r
-            grid\r
-            md:grid-cols-2\r
-            gap-10\r
-            mb-24\r
-          `,children:[{actor:{name:`Actor 1`,img:`https://picsum.photos/300?101`},culture:{name:`Culture 1`,img:`https://picsum.photos/300?201`}},{actor:{name:`Actor 2`,img:`https://picsum.photos/300?102`},culture:{name:`Culture 2`,img:`https://picsum.photos/300?202`}},{actor:{name:`Actor 3`,img:`https://picsum.photos/300?103`},culture:{name:`Culture 3`,img:`https://picsum.photos/300?203`}},{actor:{name:`Actor 4`,img:`https://picsum.photos/300?104`},culture:{name:`Culture 4`,img:`https://picsum.photos/300?204`}}].map((e,t)=>(0,T.jsxs)(`div`,{className:`\r
-                bg-white\r
-                rounded-3xl\r
-                p-6\r
-                shadow-md\r
-                flex\r
-                items-center\r
-                justify-center\r
-                gap-6\r
+              `})})]})]}),(0,T.jsxs)(`section`,{id:`cultural`,className:`max-w-7xl mx-auto px-6 pb-24`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Cultural Composition`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-2 gap-10 mb-24`,children:[{actor:{name:`Actor 1`,img:`https://picsum.photos/300?101`},culture:{name:`Culture 1`,img:`https://picsum.photos/300?201`}},{actor:{name:`Actor 2`,img:`https://picsum.photos/300?102`},culture:{name:`Culture 2`,img:`https://picsum.photos/300?202`}},{actor:{name:`Actor 3`,img:`https://picsum.photos/300?103`},culture:{name:`Culture 3`,img:`https://picsum.photos/300?203`}},{actor:{name:`Actor 4`,img:`https://picsum.photos/300?104`},culture:{name:`Culture 4`,img:`https://picsum.photos/300?204`}}].map((e,t)=>(0,T.jsxs)(`div`,{className:`\r
+                bg-white rounded-3xl p-6 shadow-md\r
+                flex items-center justify-center gap-6\r
               `,children:[(0,T.jsxs)(`div`,{onClick:()=>s(e.actor),className:`
-                  rounded-2xl
-                  overflow-hidden
-                  cursor-pointer
+                  rounded-2xl overflow-hidden cursor-pointer
                   transition-all duration-300
 
                   ${o?.name===e.actor.name?`ring-4 ring-black scale-105`:`hover:scale-105`}
-                `,children:[(0,T.jsx)(`img`,{src:e.actor.img,alt:``,className:`\r
-                    w-40\r
-                    h-40\r
-                    object-cover\r
-                  `}),(0,T.jsx)(`div`,{className:`\r
-                    text-center\r
-                    py-3\r
-                    text-lg\r
-                    font-semibold\r
-                    bg-white\r
-                  `,children:e.actor.name})]}),(0,T.jsx)(`div`,{className:`text-4xl font-light`,children:`+`}),(0,T.jsxs)(`div`,{onClick:()=>l(e.culture),className:`
-                  rounded-2xl
-                  overflow-hidden
-                  cursor-pointer
+                `,children:[(0,T.jsx)(`img`,{src:e.actor.img,alt:``,className:`w-40 h-40 object-cover`}),(0,T.jsx)(`div`,{className:`text-center py-3 text-lg font-semibold bg-white`,children:e.actor.name})]}),(0,T.jsx)(`div`,{className:`text-4xl font-light`,children:`+`}),(0,T.jsxs)(`div`,{onClick:()=>l(e.culture),className:`
+                  rounded-2xl overflow-hidden cursor-pointer
                   transition-all duration-300
 
                   ${c?.name===e.culture.name?`ring-4 ring-black scale-105`:`hover:scale-105`}
-                `,children:[(0,T.jsx)(`img`,{src:e.culture.img,alt:``,className:`\r
-                    w-40\r
-                    h-40\r
-                    object-cover\r
-                  `}),(0,T.jsx)(`div`,{className:`\r
-                    text-center\r
-                    py-3\r
-                    text-lg\r
-                    font-semibold\r
-                    bg-white\r
-                  `,children:e.culture.name})]})]},t))}),(0,T.jsxs)(`div`,{className:`\r
-            max-w-4xl\r
-            mx-auto\r
-            bg-white\r
-            rounded-3xl\r
-            p-8\r
-            shadow-md\r
-            mb-20\r
-          `,children:[(0,T.jsx)(`h3`,{className:`\r
-              text-3xl\r
-              font-bold\r
-              text-center\r
-              mb-8\r
-            `,children:`Output Image`}),(0,T.jsx)(`div`,{className:`\r
-              bg-gray-100\r
-              rounded-2xl\r
+                `,children:[(0,T.jsx)(`img`,{src:e.culture.img,alt:``,className:`w-40 h-40 object-cover`}),(0,T.jsx)(`div`,{className:`text-center py-3 text-lg font-semibold bg-white`,children:e.culture.name})]})]},t))}),(0,T.jsxs)(`div`,{className:`\r
+            max-w-4xl mx-auto bg-white\r
+            rounded-3xl p-8 shadow-md mb-20\r
+          `,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-8`,children:`Output Image`}),(0,T.jsx)(`div`,{className:`\r
+              bg-gray-100 rounded-2xl\r
               min-h-[550px]\r
-              flex\r
-              items-center\r
-              justify-center\r
+              flex items-center justify-center\r
             `,children:(0,T.jsx)(`img`,{src:`https://picsum.photos/1000/700?random=${o?.name||`actor`}${c?.name||`culture`}`,alt:``,className:`\r
                 max-w-full\r
                 max-h-[700px]\r
                 object-contain\r
                 rounded-2xl\r
-              `})})]}),(0,T.jsxs)(`div`,{className:`\r
-            bg-white\r
-            rounded-3xl\r
-            p-10\r
-            shadow-md\r
-          `,children:[(0,T.jsx)(`h3`,{className:`\r
-              text-3xl\r
-              font-bold\r
-              mb-6\r
-            `,children:`Prompt`}),(0,T.jsxs)(`p`,{className:`\r
-              text-2xl\r
-              text-gray-700\r
-              leading-relaxed\r
-            `,children:[`A cinematic cultural composition featuring`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:o?.name}),` `,`immersed in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:c?.name}),` `,`environment with dramatic storytelling, realistic lighting and movie-grade aesthetics.`]})]})]})]})}function E(){return(0,T.jsx)(le,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,T.jsx)(_.StrictMode,{children:(0,T.jsx)(E,{})}));
+              `})})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-10 shadow-md mb-24`,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold mb-6`,children:`Prompt`}),(0,T.jsxs)(`p`,{className:`text-2xl text-gray-700 leading-relaxed`,children:[`A cinematic cultural composition featuring`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:o?.name}),` `,`immersed in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:c?.name}),` `,`environment with dramatic storytelling, realistic lighting and movie-grade aesthetics.`]})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl shadow-md p-10`,children:[(0,T.jsx)(`h2`,{className:`text-4xl font-semibold mb-8`,children:`References`}),(0,T.jsxs)(`div`,{className:`\r
+              text-xl text-gray-700\r
+              leading-relaxed space-y-5 mb-16\r
+            `,children:[(0,T.jsx)(`p`,{children:`RefCompose: Multi-Reference Image Generation via LoRA-Conditioned Diffusion.`}),(0,T.jsx)(`p`,{children:`BMVC 2026 Research Demonstration Website.`})]}),(0,T.jsx)(`h2`,{className:`text-4xl font-semibold mb-8`,children:`Credits`}),(0,T.jsxs)(`div`,{className:`\r
+              text-xl text-gray-700\r
+              leading-relaxed space-y-6\r
+            `,children:[(0,T.jsx)(`div`,{children:(0,T.jsx)(`p`,{children:`We acknowledge and credit the original authors for the webpage design inspiration and presentation layout.`})}),(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`p`,{className:`font-semibold mb-3`,children:`Website Inspiration`}),(0,T.jsx)(`a`,{href:`https://edit-by-track.github.io/`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
+                  text-blue-600\r
+                  hover:underline\r
+                  block\r
+                `,children:`Edit-by-Track: Generative Video Motion Editing with 3D Point Tracks`})]}),(0,T.jsx)(`p`,{children:`This project webpage was designed for showcasing research demonstrations, visual outputs and multi-reference image generation results.`})]})]})]})]})}function E(){return(0,T.jsx)(le,{})}(0,v.createRoot)(document.getElementById(`root`)).render((0,T.jsx)(_.StrictMode,{children:(0,T.jsx)(E,{})}));
