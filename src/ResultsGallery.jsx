@@ -183,7 +183,7 @@ export default function ResultsGallery() {
                 transition-all
               "
             >
-              Jinka Harshavardhan²³
+              Jinka Harshavardhan¹³
             </a>
 
           </div>
@@ -197,8 +197,8 @@ export default function ResultsGallery() {
               mb-5
             "
           >
-            <span className="mr-6">¹ IIT Madras</span>
-            <span className="mr-6">² EROS NOW</span>
+            <span className="mr-6">¹ EROS NOW</span>
+            <span className="mr-6">² IIT Madras</span>
             <span>³ SRMIST</span>
           </div>
 
