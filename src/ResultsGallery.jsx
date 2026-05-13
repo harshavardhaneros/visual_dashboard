@@ -107,7 +107,6 @@ export default function ResultsGallery() {
 
         <div className="max-w-7xl mx-auto text-center">
 
-          {/* TITLE */}
           <h1
             className="
               text-4xl
@@ -179,28 +178,15 @@ export default function ResultsGallery() {
           >
 
             <a
-              href="https://arxiv.org/"
+              href="https://example.com/paper"
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white
-                rounded-full
-                px-6
-                md:px-8
-                py-3
-                md:py-4
-                shadow-md
-                flex
-                items-center
-                gap-2
-                md:gap-3
-                text-base
-                md:text-xl
-                font-medium
-                hover:scale-105
-                hover:shadow-lg
-                transition-all
-                duration-300
+                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
+                shadow-md flex items-center gap-2 md:gap-3
+                text-base md:text-xl font-medium
+                hover:scale-105 hover:shadow-lg
+                transition-all duration-300
               "
             >
               <FileText size={20} />
@@ -212,24 +198,11 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white
-                rounded-full
-                px-6
-                md:px-8
-                py-3
-                md:py-4
-                shadow-md
-                flex
-                items-center
-                gap-2
-                md:gap-3
-                text-base
-                md:text-xl
-                font-medium
-                hover:scale-105
-                hover:shadow-lg
-                transition-all
-                duration-300
+                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
+                shadow-md flex items-center gap-2 md:gap-3
+                text-base md:text-xl font-medium
+                hover:scale-105 hover:shadow-lg
+                transition-all duration-300
               "
             >
               <BookOpen size={20} />
@@ -241,24 +214,11 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white
-                rounded-full
-                px-6
-                md:px-8
-                py-3
-                md:py-4
-                shadow-md
-                flex
-                items-center
-                gap-2
-                md:gap-3
-                text-base
-                md:text-xl
-                font-medium
-                hover:scale-105
-                hover:shadow-lg
-                transition-all
-                duration-300
+                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
+                shadow-md flex items-center gap-2 md:gap-3
+                text-base md:text-xl font-medium
+                hover:scale-105 hover:shadow-lg
+                transition-all duration-300
               "
             >
               <PlayCircle size={20} />
@@ -270,24 +230,11 @@ export default function ResultsGallery() {
               target="_blank"
               rel="noopener noreferrer"
               className="
-                bg-white
-                rounded-full
-                px-6
-                md:px-8
-                py-3
-                md:py-4
-                shadow-md
-                flex
-                items-center
-                gap-2
-                md:gap-3
-                text-base
-                md:text-xl
-                font-medium
-                hover:scale-105
-                hover:shadow-lg
-                transition-all
-                duration-300
+                bg-white rounded-full px-6 md:px-8 py-3 md:py-4
+                shadow-md flex items-center gap-2 md:gap-3
+                text-base md:text-xl font-medium
+                hover:scale-105 hover:shadow-lg
+                transition-all duration-300
               "
             >
               <Quote size={20} />
@@ -308,63 +255,37 @@ export default function ResultsGallery() {
 
           <p
             className="
-              text-2xl
-              md:text-3xl
-              leading-relaxed
-              mb-10
+              text-2xl md:text-3xl leading-relaxed mb-10
             "
           >
             RefCompose enables controllable multi-reference image generation
-            through LoRA-conditioned diffusion models. Explore our visual
-            applications below:
+            through LoRA-conditioned diffusion models.
           </p>
 
           <div
             className="
-              bg-white
-              rounded-full
-              shadow-md
-              px-6
-              py-5
-              flex
-              flex-wrap
-              justify-center
-              gap-10
+              bg-white rounded-full shadow-md px-6 py-5
+              flex flex-wrap justify-center gap-10
             "
           >
 
             <a
               href="#ads"
-              className="
-                text-xl
-                font-semibold
-                hover:text-blue-600
-                transition-all
-              "
+              className="text-xl font-semibold hover:text-blue-600 transition-all"
             >
               Ads Generation
             </a>
 
             <a
               href="#cinematic"
-              className="
-                text-xl
-                font-semibold
-                hover:text-blue-600
-                transition-all
-              "
+              className="text-xl font-semibold hover:text-blue-600 transition-all"
             >
               Cinematic Shots
             </a>
 
             <a
               href="#cultural"
-              className="
-                text-xl
-                font-semibold
-                hover:text-blue-600
-                transition-all
-              "
+              className="text-xl font-semibold hover:text-blue-600 transition-all"
             >
               Cultural Composition
             </a>
@@ -413,16 +334,7 @@ export default function ResultsGallery() {
                 {sample.grid.map((img, index) => (
                   <div
                     key={index}
-                    className={`
-                      overflow-hidden rounded-2xl
-
-                      ${index === 0 ? "h-24" : ""}
-                      ${index === 1 ? "h-32 row-span-2" : ""}
-                      ${index === 2 ? "h-24" : ""}
-                      ${index === 3 ? "h-32" : ""}
-                      ${index === 4 ? "h-24" : ""}
-                      ${index === 5 ? "h-24" : ""}
-                    `}
+                    className="overflow-hidden rounded-2xl h-28"
                   >
 
                     <img
@@ -470,8 +382,7 @@ export default function ResultsGallery() {
 
               <div
                 className="
-                  bg-gray-100 rounded-2xl
-                  min-h-[350px]
+                  bg-gray-100 rounded-2xl min-h-[350px]
                   flex items-center justify-center
                 "
               >
@@ -480,10 +391,8 @@ export default function ResultsGallery() {
                   src={selectedSample.outputs[type]}
                   alt=""
                   className="
-                    max-w-full
-                    max-h-[500px]
-                    object-contain
-                    rounded-2xl
+                    max-w-full max-h-[500px]
+                    object-contain rounded-2xl
                   "
                 />
 
@@ -538,18 +447,11 @@ export default function ResultsGallery() {
           </h3>
 
           <p className="text-2xl text-gray-700 leading-relaxed">
-
-            Cinematic scene generated in
-
-            {" "}
+            Cinematic scene generated in{" "}
             <span className="font-bold text-black">
               {selectedStyle}
-            </span>
-
-            {" "}
-            style with movie-grade lighting,
-            storytelling composition and visually rich atmosphere.
-
+            </span>{" "}
+            style with movie-grade lighting and storytelling composition.
           </p>
 
         </div>
@@ -562,8 +464,7 @@ export default function ResultsGallery() {
 
           <div
             className="
-              bg-gray-100 rounded-2xl
-              min-h-[550px]
+              bg-gray-100 rounded-2xl min-h-[550px]
               flex items-center justify-center
             "
           >
@@ -572,10 +473,8 @@ export default function ResultsGallery() {
               src={`https://picsum.photos/1200/700?random=${selectedStyle}`}
               alt=""
               className="
-                max-w-full
-                max-h-[700px]
-                object-contain
-                rounded-2xl
+                max-w-full max-h-[700px]
+                object-contain rounded-2xl
               "
             />
 
@@ -596,7 +495,6 @@ export default function ResultsGallery() {
           Cultural Composition
         </h2>
 
-        {/* PAIRS */}
         <div className="grid md:grid-cols-2 gap-10 mb-24">
 
           {[
@@ -654,59 +552,39 @@ export default function ResultsGallery() {
               "
             >
 
-              {/* ACTOR */}
               <div
                 onClick={() => setSelectedActor(pair.actor)}
-                className={`
-                  rounded-2xl overflow-hidden cursor-pointer
-                  transition-all duration-300
-
-                  ${
-                    selectedActor?.name === pair.actor.name
-                      ? "ring-4 ring-black scale-105"
-                      : "hover:scale-105"
-                  }
-                `}
+                className="cursor-pointer"
               >
 
                 <img
                   src={pair.actor.img}
                   alt=""
-                  className="w-40 h-40 object-cover"
+                  className="w-40 h-40 object-cover rounded-2xl"
                 />
 
-                <div className="text-center py-3 text-lg font-semibold bg-white">
+                <div className="text-center mt-3 text-lg font-semibold">
                   {pair.actor.name}
                 </div>
 
               </div>
 
-              <div className="text-4xl font-light">
+              <div className="text-4xl">
                 +
               </div>
 
-              {/* CULTURE */}
               <div
                 onClick={() => setSelectedCulture(pair.culture)}
-                className={`
-                  rounded-2xl overflow-hidden cursor-pointer
-                  transition-all duration-300
-
-                  ${
-                    selectedCulture?.name === pair.culture.name
-                      ? "ring-4 ring-black scale-105"
-                      : "hover:scale-105"
-                  }
-                `}
+                className="cursor-pointer"
               >
 
                 <img
                   src={pair.culture.img}
                   alt=""
-                  className="w-40 h-40 object-cover"
+                  className="w-40 h-40 object-cover rounded-2xl"
                 />
 
-                <div className="text-center py-3 text-lg font-semibold bg-white">
+                <div className="text-center mt-3 text-lg font-semibold">
                   {pair.culture.name}
                 </div>
 
@@ -732,8 +610,7 @@ export default function ResultsGallery() {
 
           <div
             className="
-              bg-gray-100 rounded-2xl
-              min-h-[550px]
+              bg-gray-100 rounded-2xl min-h-[550px]
               flex items-center justify-center
             "
           >
@@ -744,10 +621,8 @@ export default function ResultsGallery() {
               }${selectedCulture?.name || "culture"}`}
               alt=""
               className="
-                max-w-full
-                max-h-[700px]
-                object-contain
-                rounded-2xl
+                max-w-full max-h-[700px]
+                object-contain rounded-2xl
               "
             />
 
@@ -764,24 +639,19 @@ export default function ResultsGallery() {
 
           <p className="text-2xl text-gray-700 leading-relaxed">
 
-            A cinematic cultural composition featuring
+            A cinematic cultural composition featuring{" "}
 
-            {" "}
             <span className="font-bold text-black">
               {selectedActor?.name}
             </span>
 
-            {" "}
-            immersed in
+            {" "}immersed in{" "}
 
-            {" "}
             <span className="font-bold text-black">
               {selectedCulture?.name}
             </span>
 
-            {" "}
-            environment with dramatic storytelling,
-            realistic lighting and movie-grade aesthetics.
+            {" "}environment with dramatic storytelling and realistic lighting.
 
           </p>
 
@@ -799,18 +669,70 @@ export default function ResultsGallery() {
           <div
             className="
               text-xl text-gray-700
-              leading-relaxed space-y-5 mb-16
+              leading-relaxed space-y-8 mb-16
             "
           >
 
-            <p>
-              RefCompose: Multi-Reference Image Generation
-              via LoRA-Conditioned Diffusion.
-            </p>
+            <div>
 
-            <p>
-              BMVC 2026 Research Demonstration Website.
-            </p>
+              <a
+                href="https://example.com/refcompose-paper"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-blue-600 hover:underline
+                  font-medium block
+                "
+              >
+                RefCompose: Multi-Reference Image Generation
+                via LoRA-Conditioned Diffusion
+              </a>
+
+              <p className="text-gray-500 mt-1">
+                BMVC 2026 Research Paper
+              </p>
+
+            </div>
+
+            <div>
+
+              <a
+                href="https://example.com/lora-diffusion"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-blue-600 hover:underline
+                  font-medium block
+                "
+              >
+                LoRA-Conditioned Diffusion Models
+              </a>
+
+              <p className="text-gray-500 mt-1">
+                Generative Vision Research
+              </p>
+
+            </div>
+
+            <div>
+
+              <a
+                href="https://example.com/multi-reference"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-blue-600 hover:underline
+                  font-medium block
+                "
+              >
+                Multi-Reference Visual Composition Techniques
+              </a>
+
+              <p className="text-gray-500 mt-1">
+                Image Composition & Layout Modeling
+              </p>
+
+            </div>
 
           </div>
 
@@ -826,14 +748,10 @@ export default function ResultsGallery() {
             "
           >
 
-            <div>
-
-              <p>
-                We acknowledge and credit the original authors
-                for the webpage design inspiration and presentation layout.
-              </p>
-
-            </div>
+            <p>
+              We acknowledge and credit the original authors
+              for the webpage design inspiration and presentation layout.
+            </p>
 
             <div>
 
@@ -846,9 +764,7 @@ export default function ResultsGallery() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="
-                  text-blue-600
-                  hover:underline
-                  block
+                  text-blue-600 hover:underline block
                 "
               >
                 Edit-by-Track: Generative Video Motion Editing with 3D Point Tracks
