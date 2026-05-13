@@ -23,7 +23,19 @@ Error generating stack: `+e.message+`
               text-[#4f6cff]\r
               text-xl\r
               mb-6\r
-            `,children:[(0,T.jsx)(`span`,{children:`Kuppa Sai Sri Teja¹`}),(0,T.jsx)(`span`,{children:`Priyadarsan B¹²`}),(0,T.jsx)(`span`,{children:`Parth Shinde¹²`}),(0,T.jsx)(`span`,{children:`Jinka Harshavardhan²³`})]}),(0,T.jsxs)(`div`,{className:`\r
+            `,children:[(0,T.jsx)(`a`,{href:`https://example.com/teja`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
+                hover:underline\r
+                transition-all\r
+              `,children:`Kuppa Sai Sri Teja¹`}),(0,T.jsx)(`a`,{href:`https://example.com/priyadarsan`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
+                hover:underline\r
+                transition-all\r
+              `,children:`Priyadarsan B¹²`}),(0,T.jsx)(`a`,{href:`https://example.com/parth`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
+                hover:underline\r
+                transition-all\r
+              `,children:`Parth Shinde¹²`}),(0,T.jsx)(`a`,{href:`https://example.com/harsha`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
+                hover:underline\r
+                transition-all\r
+              `,children:`Jinka Harshavardhan²³`})]}),(0,T.jsxs)(`div`,{className:`\r
               text-2xl\r
               text-gray-700\r
               leading-relaxed\r
@@ -35,52 +47,95 @@ Error generating stack: `+e.message+`
               gap-4\r
               md:gap-6\r
             `,children:[(0,T.jsxs)(`a`,{href:`https://example.com/paper`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4\r
-                shadow-md flex items-center gap-2 md:gap-3\r
-                text-base md:text-xl font-medium\r
-                hover:scale-105 hover:shadow-lg\r
+                bg-white rounded-full\r
+                px-6 md:px-8\r
+                py-3 md:py-4\r
+                shadow-md\r
+                flex items-center gap-2 md:gap-3\r
+                text-base md:text-xl\r
+                font-medium\r
+                hover:scale-105\r
+                hover:shadow-lg\r
                 transition-all duration-300\r
               `,children:[(0,T.jsx)(oe,{size:20}),`Paper`]}),(0,T.jsxs)(`a`,{href:`https://arxiv.org/`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4\r
-                shadow-md flex items-center gap-2 md:gap-3\r
-                text-base md:text-xl font-medium\r
-                hover:scale-105 hover:shadow-lg\r
+                bg-white rounded-full\r
+                px-6 md:px-8\r
+                py-3 md:py-4\r
+                shadow-md\r
+                flex items-center gap-2 md:gap-3\r
+                text-base md:text-xl\r
+                font-medium\r
+                hover:scale-105\r
+                hover:shadow-lg\r
                 transition-all duration-300\r
               `,children:[(0,T.jsx)(ie,{size:20}),`arXiv`]}),(0,T.jsxs)(`a`,{href:`https://youtube.com/`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4\r
-                shadow-md flex items-center gap-2 md:gap-3\r
-                text-base md:text-xl font-medium\r
-                hover:scale-105 hover:shadow-lg\r
+                bg-white rounded-full\r
+                px-6 md:px-8\r
+                py-3 md:py-4\r
+                shadow-md\r
+                flex items-center gap-2 md:gap-3\r
+                text-base md:text-xl\r
+                font-medium\r
+                hover:scale-105\r
+                hover:shadow-lg\r
                 transition-all duration-300\r
               `,children:[(0,T.jsx)(ae,{size:20}),`Video`]}),(0,T.jsxs)(`a`,{href:`https://scholar.google.com/`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
-                bg-white rounded-full px-6 md:px-8 py-3 md:py-4\r
-                shadow-md flex items-center gap-2 md:gap-3\r
-                text-base md:text-xl font-medium\r
-                hover:scale-105 hover:shadow-lg\r
+                bg-white rounded-full\r
+                px-6 md:px-8\r
+                py-3 md:py-4\r
+                shadow-md\r
+                flex items-center gap-2 md:gap-3\r
+                text-base md:text-xl\r
+                font-medium\r
+                hover:scale-105\r
+                hover:shadow-lg\r
                 transition-all duration-300\r
               `,children:[(0,T.jsx)(se,{size:20}),`BibTeX`]})]})]})}),(0,T.jsx)(`section`,{className:`px-6 mb-28`,children:(0,T.jsxs)(`div`,{className:`max-w-7xl mx-auto`,children:[(0,T.jsx)(`p`,{className:`\r
-              text-2xl md:text-3xl leading-relaxed mb-10\r
+              text-2xl md:text-3xl\r
+              leading-relaxed mb-10\r
             `,children:`RefCompose enables controllable multi-reference image generation through LoRA-conditioned diffusion models.`}),(0,T.jsxs)(`div`,{className:`\r
-              bg-white rounded-full shadow-md px-6 py-5\r
+              bg-white rounded-full shadow-md\r
+              px-6 py-5\r
               flex flex-wrap justify-center gap-10\r
-            `,children:[(0,T.jsx)(`a`,{href:`#ads`,className:`text-xl font-semibold hover:text-blue-600 transition-all`,children:`Ads Generation`}),(0,T.jsx)(`a`,{href:`#cinematic`,className:`text-xl font-semibold hover:text-blue-600 transition-all`,children:`Cinematic Shots`}),(0,T.jsx)(`a`,{href:`#cultural`,className:`text-xl font-semibold hover:text-blue-600 transition-all`,children:`Cultural Composition`})]})]})}),(0,T.jsxs)(`section`,{id:`ads`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Ads Generation`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-3 gap-10 mb-14`,children:e.map(e=>(0,T.jsxs)(`div`,{onClick:()=>n(e),className:`
+            `,children:[(0,T.jsx)(`a`,{href:`#ads`,className:`\r
+                text-xl font-semibold\r
+                hover:text-blue-600\r
+                transition-all\r
+              `,children:`Ads Generation`}),(0,T.jsx)(`a`,{href:`#cinematic`,className:`\r
+                text-xl font-semibold\r
+                hover:text-blue-600\r
+                transition-all\r
+              `,children:`Cinematic Shots`}),(0,T.jsx)(`a`,{href:`#cultural`,className:`\r
+                text-xl font-semibold\r
+                hover:text-blue-600\r
+                transition-all\r
+              `,children:`Cultural Composition`})]})]})}),(0,T.jsxs)(`section`,{id:`ads`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Ads Generation`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-3 gap-10 mb-14`,children:e.map(e=>(0,T.jsxs)(`div`,{onClick:()=>n(e),className:`
                 bg-white rounded-3xl p-5 shadow-md
                 cursor-pointer transition-all duration-300
+                hover:scale-[1.03] hover:shadow-xl
 
-                ${t.id===e.id?`ring-4 ring-black scale-105`:`hover:scale-105`}
-              `,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-6`,children:e.id}),(0,T.jsx)(`div`,{className:`grid grid-cols-3 gap-3`,children:e.grid.map((e,t)=>(0,T.jsx)(`div`,{className:`overflow-hidden rounded-2xl h-28`,children:(0,T.jsx)(`img`,{src:e,alt:``,className:`w-full h-full object-cover`})},t))})]},e.id))}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-8 shadow-md mb-16`,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold mb-4`,children:`Prompt`}),(0,T.jsx)(`p`,{className:`text-xl text-gray-700 leading-relaxed`,children:t.prompt})]}),(0,T.jsx)(`div`,{className:`grid lg:grid-cols-3 gap-10`,children:[`canvas`,`depth`,`images`].map(e=>(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl shadow-md p-6`,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold capitalize text-center mb-6`,children:e}),(0,T.jsx)(`div`,{className:`\r
-                  bg-gray-100 rounded-2xl min-h-[350px]\r
+                ${t.id===e.id?`ring-4 ring-black`:``}
+              `,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-6`,children:e.id}),(0,T.jsx)(`div`,{className:`grid grid-cols-3 gap-3`,children:e.grid.map((e,t)=>(0,T.jsx)(`div`,{className:`overflow-hidden rounded-2xl h-28`,children:(0,T.jsx)(`img`,{src:e,alt:``,className:`w-full h-full object-cover`})},t))})]},e.id))}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-8 shadow-md mb-16`,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold mb-4`,children:`Prompt`}),(0,T.jsx)(`p`,{className:`text-xl text-gray-700 leading-relaxed`,children:t.prompt})]}),(0,T.jsx)(`div`,{className:`grid lg:grid-cols-3 gap-10`,children:[`canvas`,`depth`,`images`].map(e=>(0,T.jsxs)(`div`,{className:`\r
+                bg-white rounded-3xl shadow-md p-6\r
+                hover:shadow-xl transition-all duration-300\r
+              `,children:[(0,T.jsx)(`h3`,{className:`text-2xl font-bold capitalize text-center mb-6`,children:e}),(0,T.jsx)(`div`,{className:`\r
+                  bg-gray-100 rounded-2xl\r
+                  min-h-[350px]\r
                   flex items-center justify-center\r
                 `,children:(0,T.jsx)(`img`,{src:t.outputs[e],alt:``,className:`\r
                     max-w-full max-h-[500px]\r
                     object-contain rounded-2xl\r
                   `})})]},e))})]}),(0,T.jsxs)(`section`,{id:`cinematic`,className:`max-w-7xl mx-auto px-6 mb-40`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Cinematic Shots`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-3 gap-8 mb-20`,children:r.map(e=>(0,T.jsx)(`button`,{onClick:()=>a(e),className:`
                 bg-white rounded-3xl py-10 text-2xl
-                font-semibold shadow-md transition-all duration-300
+                font-semibold shadow-md
+                transition-all duration-300
+                hover:scale-[1.03]
+                hover:shadow-xl
 
-                ${i===e?`ring-4 ring-black scale-105`:`hover:scale-105`}
+                ${i===e?`ring-4 ring-black`:``}
               `,children:e},e))}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-10 shadow-md mb-16`,children:[(0,T.jsxs)(`h3`,{className:`text-3xl font-bold mb-6`,children:[i,` Prompt`]}),(0,T.jsxs)(`p`,{className:`text-2xl text-gray-700 leading-relaxed`,children:[`Cinematic scene generated in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:i}),` `,`style with movie-grade lighting and storytelling composition.`]})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-8 shadow-md`,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-8`,children:`Output`}),(0,T.jsx)(`div`,{className:`\r
-              bg-gray-100 rounded-2xl min-h-[550px]\r
+              bg-gray-100 rounded-2xl\r
+              min-h-[550px]\r
               flex items-center justify-center\r
             `,children:(0,T.jsx)(`img`,{src:`https://picsum.photos/1200/700?random=${i}`,alt:``,className:`\r
                 max-w-full max-h-[700px]\r
@@ -88,16 +143,32 @@ Error generating stack: `+e.message+`
               `})})]})]}),(0,T.jsxs)(`section`,{id:`cultural`,className:`max-w-7xl mx-auto px-6 pb-24`,children:[(0,T.jsx)(`h2`,{className:`text-5xl font-semibold text-center mb-16`,children:`Cultural Composition`}),(0,T.jsx)(`div`,{className:`grid md:grid-cols-2 gap-10 mb-24`,children:[{actor:{name:`Actor 1`,img:`https://picsum.photos/300?101`},culture:{name:`Culture 1`,img:`https://picsum.photos/300?201`}},{actor:{name:`Actor 2`,img:`https://picsum.photos/300?102`},culture:{name:`Culture 2`,img:`https://picsum.photos/300?202`}},{actor:{name:`Actor 3`,img:`https://picsum.photos/300?103`},culture:{name:`Culture 3`,img:`https://picsum.photos/300?203`}},{actor:{name:`Actor 4`,img:`https://picsum.photos/300?104`},culture:{name:`Culture 4`,img:`https://picsum.photos/300?204`}}].map((e,t)=>(0,T.jsxs)(`div`,{className:`\r
                 bg-white rounded-3xl p-6 shadow-md\r
                 flex items-center justify-center gap-6\r
-              `,children:[(0,T.jsxs)(`div`,{onClick:()=>s(e.actor),className:`cursor-pointer`,children:[(0,T.jsx)(`img`,{src:e.actor.img,alt:``,className:`w-40 h-40 object-cover rounded-2xl`}),(0,T.jsx)(`div`,{className:`text-center mt-3 text-lg font-semibold`,children:e.actor.name})]}),(0,T.jsx)(`div`,{className:`text-4xl`,children:`+`}),(0,T.jsxs)(`div`,{onClick:()=>l(e.culture),className:`cursor-pointer`,children:[(0,T.jsx)(`img`,{src:e.culture.img,alt:``,className:`w-40 h-40 object-cover rounded-2xl`}),(0,T.jsx)(`div`,{className:`text-center mt-3 text-lg font-semibold`,children:e.culture.name})]})]},t))}),(0,T.jsxs)(`div`,{className:`\r
+                transition-all duration-300\r
+                hover:scale-[1.03]\r
+                hover:shadow-xl\r
+              `,children:[(0,T.jsxs)(`div`,{onClick:()=>s(e.actor),className:`\r
+                  cursor-pointer\r
+                  transition-all duration-300\r
+                  hover:scale-105\r
+                `,children:[(0,T.jsx)(`img`,{src:e.actor.img,alt:``,className:`\r
+                    w-40 h-40 object-cover rounded-2xl\r
+                  `}),(0,T.jsx)(`div`,{className:`text-center mt-3 text-lg font-semibold`,children:e.actor.name})]}),(0,T.jsx)(`div`,{className:`text-4xl font-light`,children:`+`}),(0,T.jsxs)(`div`,{onClick:()=>l(e.culture),className:`\r
+                  cursor-pointer\r
+                  transition-all duration-300\r
+                  hover:scale-105\r
+                `,children:[(0,T.jsx)(`img`,{src:e.culture.img,alt:``,className:`\r
+                    w-40 h-40 object-cover rounded-2xl\r
+                  `}),(0,T.jsx)(`div`,{className:`text-center mt-3 text-lg font-semibold`,children:e.culture.name})]})]},t))}),(0,T.jsxs)(`div`,{className:`\r
             max-w-4xl mx-auto bg-white\r
             rounded-3xl p-8 shadow-md mb-20\r
           `,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold text-center mb-8`,children:`Output Image`}),(0,T.jsx)(`div`,{className:`\r
-              bg-gray-100 rounded-2xl min-h-[550px]\r
+              bg-gray-100 rounded-2xl\r
+              min-h-[550px]\r
               flex items-center justify-center\r
             `,children:(0,T.jsx)(`img`,{src:`https://picsum.photos/1000/700?random=${o?.name||`actor`}${c?.name||`culture`}`,alt:``,className:`\r
                 max-w-full max-h-[700px]\r
                 object-contain rounded-2xl\r
-              `})})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-10 shadow-md mb-24`,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold mb-6`,children:`Prompt`}),(0,T.jsxs)(`p`,{className:`text-2xl text-gray-700 leading-relaxed`,children:[`A cinematic cultural composition featuring`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:o?.name}),` `,`immersed in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:c?.name}),` `,`environment with dramatic storytelling and realistic lighting.`]})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl shadow-md p-10`,children:[(0,T.jsx)(`h2`,{className:`text-4xl font-semibold mb-8`,children:`References`}),(0,T.jsxs)(`div`,{className:`\r
+              `})})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl p-10 shadow-md mb-24`,children:[(0,T.jsx)(`h3`,{className:`text-3xl font-bold mb-6`,children:`Prompt`}),(0,T.jsxs)(`p`,{className:`text-2xl text-gray-700 leading-relaxed`,children:[`A cinematic cultural composition featuring`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:o?.name}),` `,`immersed in`,` `,(0,T.jsx)(`span`,{className:`font-bold text-black`,children:c?.name}),` `,`environment with dramatic storytelling, realistic lighting and movie-grade aesthetics.`]})]}),(0,T.jsxs)(`div`,{className:`bg-white rounded-3xl shadow-md p-10`,children:[(0,T.jsx)(`h2`,{className:`text-4xl font-semibold mb-8`,children:`References`}),(0,T.jsxs)(`div`,{className:`\r
               text-xl text-gray-700\r
               leading-relaxed space-y-8 mb-16\r
             `,children:[(0,T.jsxs)(`div`,{children:[(0,T.jsx)(`a`,{href:`https://example.com/refcompose-paper`,target:`_blank`,rel:`noopener noreferrer`,className:`\r
