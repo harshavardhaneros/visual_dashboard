@@ -4,7 +4,42 @@ import {
   PlayCircle,
   Quote,
   BookOpen,
+  ArrowRight,
 } from "lucide-react";
+
+import horrorStraight from "../themes/horror/underwater_resultt.png";
+import horrorDepth from "../themes/depth/horror/gen_depth.png";
+import underwaterStraight from "../themes/underwater/underwater_resultt.png";
+import underwaterDepth from "../themes/depth/underwater/gen_depth.png";
+import actor1Img from "../themes/cultural_shots/image srk.png";
+import culture1Img from "../themes/cultural_shots/image upanayanam.png";
+import srkUpanayanamResult from "../themes/cultural_shots/integrated_result_srk_var03_perfect_depth (1).png";
+
+const cinematicCardBase =
+  "w-48 h-16 flex items-center justify-center text-center shrink-0 bg-white rounded-2xl text-lg md:text-xl font-bold";
+
+const selectCardClass = (isSelected) =>
+  `
+    ${cinematicCardBase}
+    uppercase tracking-wide
+    shadow-[0_4px_16px_rgba(0,0,0,0.08)]
+    border-2 transition-all duration-200 cursor-pointer
+    ${
+      isSelected
+        ? "border-black"
+        : "border-transparent hover:border-gray-300"
+    }
+  `;
+
+const labelCardClass = `${cinematicCardBase} border-2 border-black capitalize`;
+
+const culturalThumbClass =
+  "w-32 h-48 rounded-2xl overflow-hidden bg-black flex items-center justify-center";
+
+const culturalImgClass = "w-full h-full object-contain";
+
+const culturalCultureImgClass =
+  "w-full h-full object-cover object-[center_75%]";
 
 export default function ResultsGallery() {
 
@@ -74,29 +109,82 @@ export default function ResultsGallery() {
 
   /* ================= CINEMATIC ================= */
 
-  const cinematicStyles = [
-    "HORROR",
-    "COMIC",
-    "TRAGEDY",
-    "SPACE",
-    "CINEMATIC",
-    "INDIA",
+  const cinematicThemes = ["Horror", "Underwater"];
+  const cinematicViews = ["Straight", "Isometric"];
+
+  const [selectedTheme, setSelectedTheme] = useState("Horror");
+  const [selectedView, setSelectedView] = useState("Straight");
+
+  const cinematicOutputs = {
+    Horror: {
+      Straight: horrorStraight,
+      Isometric: horrorDepth,
+    },
+    Underwater: {
+      Straight: underwaterStraight,
+      Isometric: underwaterDepth,
+    },
+  };
+
+  const cinematicPrompts = {
+    Horror:
+      "Photorealistic dark fantasy photography with oppressive atmosphere, volumetric moonlight, and sinister cinematic horror lighting.",
+    Underwater:
+      "Photorealistic underwater photography with crystal-clear turquoise water, volumetric god rays, and cinematic marine lighting.",
+  };
+
+  const culturalPairs = [
+    {
+      actor: {
+        name: "Actor 1",
+        img: actor1Img,
+      },
+      culture: {
+        name: "Culture 1",
+        img: culture1Img,
+      },
+    },
+    {
+      actor: {
+        name: "Actor 2",
+        img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=320&h=320&fit=crop",
+      },
+      culture: {
+        name: "Culture 2",
+        img: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=320&h=320&fit=crop",
+      },
+    },
+    {
+      actor: {
+        name: "Actor 3",
+        img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=320&h=320&fit=crop",
+      },
+      culture: {
+        name: "Culture 3",
+        img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=320&h=320&fit=crop",
+      },
+    },
   ];
 
-  const [selectedStyle, setSelectedStyle] =
-    useState(cinematicStyles[0]);
+  const culturalOutputs = {
+    "Actor 1|Culture 1": srkUpanayanamResult,
+  };
 
   /* ================= CULTURAL ================= */
 
-  const [selectedActor, setSelectedActor] = useState({
-    name: "Actor 1",
-    img: "https://picsum.photos/300?101",
-  });
+  const [selectedActor, setSelectedActor] = useState(
+    culturalPairs[0].actor
+  );
 
-  const [selectedCulture, setSelectedCulture] = useState({
-    name: "Culture 1",
-    img: "https://picsum.photos/300?201",
-  });
+  const [selectedCulture, setSelectedCulture] = useState(
+    culturalPairs[0].culture
+  );
+
+  const culturalOutputSrc =
+    culturalOutputs[`${selectedActor?.name}|${selectedCulture?.name}`] ??
+    `https://picsum.photos/1000/700?random=${
+      selectedActor?.name || "actor"
+    }${selectedCulture?.name || "culture"}`;
 
   return (
     <div className="min-h-screen bg-[#f7f7f7] text-[#222]">
@@ -496,29 +584,39 @@ export default function ResultsGallery() {
           Cinematic Shots
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 mb-16">
 
-          {cinematicStyles.map((style) => (
-            <button
-              key={style}
-              onClick={() => setSelectedStyle(style)}
-              className={`
-                bg-white rounded-3xl py-10 text-2xl
-                font-semibold shadow-md
-                transition-all duration-300
-                hover:scale-[1.03]
-                hover:shadow-xl
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className={labelCardClass}>Themes</div>
+            <ArrowRight size={28} strokeWidth={2.5} className="shrink-0" />
 
-                ${
-                  selectedStyle === style
-                    ? "ring-4 ring-black"
-                    : ""
-                }
-              `}
-            >
-              {style}
-            </button>
-          ))}
+            {cinematicThemes.map((theme) => (
+              <button
+                key={theme}
+                type="button"
+                onClick={() => setSelectedTheme(theme)}
+                className={selectCardClass(selectedTheme === theme)}
+              >
+                {theme}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className={labelCardClass}>View</div>
+            <ArrowRight size={28} strokeWidth={2.5} className="shrink-0" />
+
+            {cinematicViews.map((view) => (
+              <button
+                key={view}
+                type="button"
+                onClick={() => setSelectedView(view)}
+                className={selectCardClass(selectedView === view)}
+              >
+                {view}
+              </button>
+            ))}
+          </div>
 
         </div>
 
@@ -526,19 +624,17 @@ export default function ResultsGallery() {
         <div className="bg-white rounded-3xl p-10 shadow-md mb-16">
 
           <h3 className="text-3xl font-bold mb-6">
-            {selectedStyle} Prompt
+            {selectedTheme} Prompt
           </h3>
 
           <p className="text-2xl text-gray-700 leading-relaxed">
 
-            Cinematic scene generated in{" "}
-
+            {cinematicPrompts[selectedTheme]}{" "}
+            Rendered with a{" "}
             <span className="font-bold text-black">
-              {selectedStyle}
+              {selectedView.toLowerCase()}
             </span>
-
-            {" "}style with movie-grade lighting and
-            storytelling composition.
+            {" "}view and movie-grade composition.
 
           </p>
 
@@ -560,8 +656,8 @@ export default function ResultsGallery() {
           >
 
             <img
-              src={`https://picsum.photos/1200/700?random=${selectedStyle}`}
-              alt=""
+              src={cinematicOutputs[selectedTheme][selectedView]}
+              alt={`${selectedTheme} ${selectedView} cinematic output`}
               className="
                 max-w-full max-h-[700px]
                 object-contain rounded-2xl
@@ -585,60 +681,15 @@ export default function ResultsGallery() {
           Cultural Composition
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 mb-24">
+        <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto mb-24">
 
-          {[
-            {
-              actor: {
-                name: "Actor 1",
-                img: "https://picsum.photos/300?101",
-              },
-              culture: {
-                name: "Culture 1",
-                img: "https://picsum.photos/300?201",
-              },
-            },
-
-            {
-              actor: {
-                name: "Actor 2",
-                img: "https://picsum.photos/300?102",
-              },
-              culture: {
-                name: "Culture 2",
-                img: "https://picsum.photos/300?202",
-              },
-            },
-
-            {
-              actor: {
-                name: "Actor 3",
-                img: "https://picsum.photos/300?103",
-              },
-              culture: {
-                name: "Culture 3",
-                img: "https://picsum.photos/300?203",
-              },
-            },
-
-            {
-              actor: {
-                name: "Actor 4",
-                img: "https://picsum.photos/300?104",
-              },
-              culture: {
-                name: "Culture 4",
-                img: "https://picsum.photos/300?204",
-              },
-            },
-
-          ].map((pair, index) => (
+          {culturalPairs.map((pair, index) => (
 
             <div
               key={index}
               className="
-                bg-white rounded-3xl p-6 shadow-md
-                flex items-center justify-center gap-6
+                bg-white rounded-3xl p-5 shadow-md
+                flex items-center justify-center gap-4
                 transition-all duration-300
                 hover:scale-[1.03]
                 hover:shadow-xl
@@ -655,15 +706,15 @@ export default function ResultsGallery() {
                 "
               >
 
-                <img
-                  src={pair.actor.img}
-                  alt=""
-                  className="
-                    w-40 h-40 object-cover rounded-2xl
-                  "
-                />
+                <div className={culturalThumbClass}>
+                  <img
+                    src={pair.actor.img}
+                    alt={pair.actor.name}
+                    className={culturalImgClass}
+                  />
+                </div>
 
-                <div className="text-center mt-3 text-lg font-semibold">
+                <div className="text-center mt-3 text-base font-semibold">
                   {pair.actor.name}
                 </div>
 
@@ -683,15 +734,15 @@ export default function ResultsGallery() {
                 "
               >
 
-                <img
-                  src={pair.culture.img}
-                  alt=""
-                  className="
-                    w-40 h-40 object-cover rounded-2xl
-                  "
-                />
+                <div className={culturalThumbClass}>
+                  <img
+                    src={pair.culture.img}
+                    alt={pair.culture.name}
+                    className={culturalCultureImgClass}
+                  />
+                </div>
 
-                <div className="text-center mt-3 text-lg font-semibold">
+                <div className="text-center mt-3 text-base font-semibold">
                   {pair.culture.name}
                 </div>
 
@@ -724,10 +775,8 @@ export default function ResultsGallery() {
           >
 
             <img
-              src={`https://picsum.photos/1000/700?random=${
-                selectedActor?.name || "actor"
-              }${selectedCulture?.name || "culture"}`}
-              alt=""
+              src={culturalOutputSrc}
+              alt={`${selectedActor?.name} and ${selectedCulture?.name} composition`}
               className="
                 max-w-full max-h-[700px]
                 object-contain rounded-2xl
