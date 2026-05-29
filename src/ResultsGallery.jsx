@@ -8,21 +8,29 @@ import {
 } from "lucide-react";
 
 import horrorStraight from "../themes/horror/underwater_resultt.png";
-import horrorDepth from "../themes/depth/horror/gen_depth.png";
+import horrorIsometric from "../themes/cinematic/isometric horror.png";
 import underwaterStraight from "../themes/underwater/underwater_resultt.png";
-import underwaterDepth from "../themes/depth/underwater/gen_depth.png";
-import actor1Img from "../themes/cultural_shots/image srk.png";
-import culture1Img from "../themes/cultural_shots/image upanayanam.png";
-import srkUpanayanamResult from "../themes/cultural_shots/integrated_result_srk_var03_perfect_depth (1).png";
+import underwaterIsometric from "../themes/cinematic/isometric underwater.png";
+import s1Thumb from "../themes/ads/chotabheem.png";
+import s1Images from "../themes/ads/chotahouse.png";
+import s2Thumb from "../themes/ads/indian sample.png";
+import s2Images from "../themes/ads/indian_house.png";
+import actor1Culture1Img from "../themes/cultural_shots/image (8).png";
+import actor2Img from "../themes/cultural_shots/image (2).png";
+import culture2Img from "../themes/cultural_shots/image (5).png";
+import actor2Culture2Result from "../themes/cultural_shots/image (7).png";
+import actor3Img from "../themes/cultural_shots/image (3).png";
+import culture3Img from "../themes/cultural_shots/image (4).png";
+import actor3Culture3Result from "../themes/cultural_shots/image (6).png";
 
 const cinematicCardBase =
-  "w-48 h-16 flex items-center justify-center text-center shrink-0 bg-white rounded-2xl text-lg md:text-xl font-bold";
+  "w-36 h-12 flex items-center justify-center text-center shrink-0 bg-white rounded-xl text-sm font-bold";
 
 const selectCardClass = (isSelected) =>
   `
     ${cinematicCardBase}
     uppercase tracking-wide
-    shadow-[0_4px_16px_rgba(0,0,0,0.08)]
+    shadow-[0_2px_10px_rgba(0,0,0,0.08)]
     border-2 transition-all duration-200 cursor-pointer
     ${
       isSelected
@@ -34,7 +42,11 @@ const selectCardClass = (isSelected) =>
 const labelCardClass = `${cinematicCardBase} border-2 border-black capitalize`;
 
 const culturalThumbClass =
-  "w-32 h-48 rounded-2xl overflow-hidden bg-black flex items-center justify-center";
+  "w-24 h-36 rounded-xl overflow-hidden bg-black flex items-center justify-center";
+
+const panelClass = "bg-white rounded-2xl shadow-md";
+
+const contentPanelWidthClass = "w-4/5 max-w-3xl mx-auto";
 
 const culturalImgClass = "w-full h-full object-contain";
 
@@ -50,18 +62,9 @@ export default function ResultsGallery() {
       id: "S1",
       prompt:
         "Luxury cinematic perfume advertisement with elegant lighting and premium visual storytelling.",
-      grid: [
-        "https://picsum.photos/400?1",
-        "https://picsum.photos/400?2",
-        "https://picsum.photos/400?3",
-        "https://picsum.photos/400?4",
-        "https://picsum.photos/400?5",
-        "https://picsum.photos/400?6",
-      ],
+      thumb: s1Thumb,
       outputs: {
-        canvas: "https://picsum.photos/900/600?7",
-        depth: "https://picsum.photos/900/600?8",
-        images: "https://picsum.photos/900/600?9",
+        images: s1Images,
       },
     },
 
@@ -69,18 +72,9 @@ export default function ResultsGallery() {
       id: "S2",
       prompt:
         "Urban fashion commercial with editorial composition and cinematic contrast.",
-      grid: [
-        "https://picsum.photos/400?10",
-        "https://picsum.photos/400?11",
-        "https://picsum.photos/400?12",
-        "https://picsum.photos/400?13",
-        "https://picsum.photos/400?14",
-        "https://picsum.photos/400?15",
-      ],
+      thumb: s2Thumb,
       outputs: {
-        canvas: "https://picsum.photos/900/600?16",
-        depth: "https://picsum.photos/900/600?17",
-        images: "https://picsum.photos/900/600?18",
+        images: s2Images,
       },
     },
 
@@ -88,17 +82,8 @@ export default function ResultsGallery() {
       id: "S3",
       prompt:
         "Minimal beverage advertisement with soft gradients and product-centric framing.",
-      grid: [
-        "https://picsum.photos/400?19",
-        "https://picsum.photos/400?20",
-        "https://picsum.photos/400?21",
-        "https://picsum.photos/400?22",
-        "https://picsum.photos/400?23",
-        "https://picsum.photos/400?24",
-      ],
+      thumb: "https://picsum.photos/400?19",
       outputs: {
-        canvas: "https://picsum.photos/900/600?25",
-        depth: "https://picsum.photos/900/600?26",
         images: "https://picsum.photos/900/600?27",
       },
     },
@@ -118,11 +103,11 @@ export default function ResultsGallery() {
   const cinematicOutputs = {
     Horror: {
       Straight: horrorStraight,
-      Isometric: horrorDepth,
+      Isometric: horrorIsometric,
     },
     Underwater: {
       Straight: underwaterStraight,
-      Isometric: underwaterDepth,
+      Isometric: underwaterIsometric,
     },
   };
 
@@ -137,54 +122,51 @@ export default function ResultsGallery() {
     {
       actor: {
         name: "Actor 1",
-        img: actor1Img,
+        img: actor1Culture1Img,
       },
       culture: {
         name: "Culture 1",
-        img: culture1Img,
+        img: actor1Culture1Img,
       },
     },
     {
       actor: {
         name: "Actor 2",
-        img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=320&h=320&fit=crop",
+        img: actor2Img,
       },
       culture: {
         name: "Culture 2",
-        img: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=320&h=320&fit=crop",
+        img: culture2Img,
       },
     },
     {
       actor: {
         name: "Actor 3",
-        img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=320&h=320&fit=crop",
+        img: actor3Img,
       },
       culture: {
         name: "Culture 3",
-        img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=320&h=320&fit=crop",
+        img: culture3Img,
       },
     },
   ];
 
-  const culturalOutputs = {
-    "Actor 1|Culture 1": srkUpanayanamResult,
-  };
+  const culturalOutputs = [
+    actor1Culture1Img,
+    actor2Culture2Result,
+    actor3Culture3Result,
+  ];
 
   /* ================= CULTURAL ================= */
 
-  const [selectedActor, setSelectedActor] = useState(
-    culturalPairs[0].actor
-  );
+  const [selectedPairIndex, setSelectedPairIndex] = useState(0);
 
-  const [selectedCulture, setSelectedCulture] = useState(
-    culturalPairs[0].culture
-  );
+  const selectedPair = culturalPairs[selectedPairIndex];
+  const culturalOutputSrc = culturalOutputs[selectedPairIndex];
 
-  const culturalOutputSrc =
-    culturalOutputs[`${selectedActor?.name}|${selectedCulture?.name}`] ??
-    `https://picsum.photos/1000/700?random=${
-      selectedActor?.name || "actor"
-    }${selectedCulture?.name || "culture"}`;
+  const selectCulturalPair = (index) => {
+    setSelectedPairIndex(index);
+  };
 
   return (
     <div className="min-h-screen bg-[#f7f7f7] text-[#222]">
@@ -465,50 +447,40 @@ export default function ResultsGallery() {
         className="max-w-7xl mx-auto px-6 mb-40"
       >
 
-        <h2 className="text-5xl font-semibold text-center mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-10">
           Ads Generation
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10 mb-14">
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
 
           {samples.map((sample) => (
             <div
               key={sample.id}
               onClick={() => setSelectedSample(sample)}
               className={`
-                bg-white rounded-3xl p-5 shadow-md
+                ${panelClass} px-3 pt-3 pb-2
+                h-[220px] flex flex-col
                 cursor-pointer transition-all duration-300
-                hover:scale-[1.03] hover:shadow-xl
+                hover:scale-[1.02] hover:shadow-lg
 
                 ${
                   selectedSample.id === sample.id
-                    ? "ring-4 ring-black"
+                    ? "ring-2 ring-black"
                     : ""
                 }
               `}
             >
 
-              <h3 className="text-3xl font-bold text-center mb-6">
+              <h3 className="text-xl font-bold text-center mb-2 shrink-0">
                 {sample.id}
               </h3>
 
-              <div className="grid grid-cols-3 gap-3">
-
-                {sample.grid.map((img, index) => (
-                  <div
-                    key={index}
-                    className="overflow-hidden rounded-2xl h-28"
-                  >
-
-                    <img
-                      src={img}
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-
-                  </div>
-                ))}
-
+              <div className="flex-1 min-h-0 flex items-center justify-center rounded-xl bg-gray-100 overflow-hidden">
+                <img
+                  src={sample.thumb}
+                  alt={sample.id}
+                  className="max-w-full max-h-full object-contain"
+                />
               </div>
 
             </div>
@@ -517,57 +489,49 @@ export default function ResultsGallery() {
         </div>
 
         {/* PROMPT */}
-        <div className="bg-white rounded-3xl p-8 shadow-md mb-16">
+        <div className={`${panelClass} p-5 mb-10`}>
 
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-lg font-bold mb-3">
             Prompt
           </h3>
 
-          <p className="text-xl text-gray-700 leading-relaxed">
+          <p className="text-base text-gray-700 leading-relaxed">
             {selectedSample.prompt}
           </p>
 
         </div>
 
         {/* OUTPUTS */}
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="flex justify-center">
 
-          {["canvas", "depth", "images"].map((type) => (
+          <div
+            className={`${panelClass} ${contentPanelWidthClass} p-4 hover:shadow-lg transition-all duration-300`}
+          >
+
+            <h3 className="text-lg font-bold text-center mb-4">
+              Images
+            </h3>
 
             <div
-              key={type}
               className="
-                bg-white rounded-3xl shadow-md p-6
-                hover:shadow-xl transition-all duration-300
+                bg-gray-100 rounded-xl
+                min-h-[220px]
+                flex items-center justify-center
               "
             >
 
-              <h3 className="text-2xl font-bold capitalize text-center mb-6">
-                {type}
-              </h3>
-
-              <div
+              <img
+                src={selectedSample.outputs.images}
+                alt={`${selectedSample.id} output`}
                 className="
-                  bg-gray-100 rounded-2xl
-                  min-h-[350px]
-                  flex items-center justify-center
+                  max-w-full max-h-[280px]
+                  object-contain rounded-xl
                 "
-              >
-
-                <img
-                  src={selectedSample.outputs[type]}
-                  alt=""
-                  className="
-                    max-w-full max-h-[500px]
-                    object-contain rounded-2xl
-                  "
-                />
-
-              </div>
+              />
 
             </div>
 
-          ))}
+          </div>
 
         </div>
 
@@ -580,15 +544,15 @@ export default function ResultsGallery() {
         className="max-w-7xl mx-auto px-6 mb-40"
       >
 
-        <h2 className="text-5xl font-semibold text-center mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-10">
           Cinematic Shots
         </h2>
 
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 mb-16">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4 mb-10">
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <div className={labelCardClass}>Themes</div>
-            <ArrowRight size={28} strokeWidth={2.5} className="shrink-0" />
+            <ArrowRight size={20} strokeWidth={2.5} className="shrink-0" />
 
             {cinematicThemes.map((theme) => (
               <button
@@ -602,9 +566,9 @@ export default function ResultsGallery() {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <div className={labelCardClass}>View</div>
-            <ArrowRight size={28} strokeWidth={2.5} className="shrink-0" />
+            <ArrowRight size={20} strokeWidth={2.5} className="shrink-0" />
 
             {cinematicViews.map((view) => (
               <button
@@ -620,14 +584,31 @@ export default function ResultsGallery() {
 
         </div>
 
-        {/* PROMPT */}
-        <div className="bg-white rounded-3xl p-10 shadow-md mb-16">
+        {/* OUTPUT */}
+        <div className={`${panelClass} ${contentPanelWidthClass} overflow-hidden mb-10`}>
 
-          <h3 className="text-3xl font-bold mb-6">
+          <h3 className="text-lg font-bold text-center px-5 pt-5 pb-4">
+            Output
+          </h3>
+
+          <div className="px-4 pb-4">
+            <img
+              src={cinematicOutputs[selectedTheme][selectedView]}
+              alt={`${selectedTheme} ${selectedView} cinematic output`}
+              className="w-full h-auto block rounded-xl"
+            />
+          </div>
+
+        </div>
+
+        {/* PROMPT */}
+        <div className={`${panelClass} ${contentPanelWidthClass} p-5`}>
+
+          <h3 className="text-lg font-bold mb-3">
             {selectedTheme} Prompt
           </h3>
 
-          <p className="text-2xl text-gray-700 leading-relaxed">
+          <p className="text-base text-gray-700 leading-relaxed">
 
             {cinematicPrompts[selectedTheme]}{" "}
             Rendered with a{" "}
@@ -640,34 +621,6 @@ export default function ResultsGallery() {
 
         </div>
 
-        {/* OUTPUT */}
-        <div className="bg-white rounded-3xl p-8 shadow-md">
-
-          <h3 className="text-3xl font-bold text-center mb-8">
-            Output
-          </h3>
-
-          <div
-            className="
-              bg-gray-100 rounded-2xl
-              min-h-[550px]
-              flex items-center justify-center
-            "
-          >
-
-            <img
-              src={cinematicOutputs[selectedTheme][selectedView]}
-              alt={`${selectedTheme} ${selectedView} cinematic output`}
-              className="
-                max-w-full max-h-[700px]
-                object-contain rounded-2xl
-              "
-            />
-
-          </div>
-
-        </div>
-
       </section>
 
       {/* ================= CULTURAL ================= */}
@@ -677,34 +630,32 @@ export default function ResultsGallery() {
         className="max-w-7xl mx-auto px-6 pb-24"
       >
 
-        <h2 className="text-5xl font-semibold text-center mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-10">
           Cultural Composition
         </h2>
 
-        <div className="grid grid-cols-3 gap-6 max-w-6xl mx-auto mb-24">
+        <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
 
           {culturalPairs.map((pair, index) => (
 
             <div
               key={index}
-              className="
-                bg-white rounded-3xl p-5 shadow-md
-                flex items-center justify-center gap-4
-                transition-all duration-300
-                hover:scale-[1.03]
-                hover:shadow-xl
-              "
+              onClick={() => selectCulturalPair(index)}
+              className={`
+                bg-white rounded-2xl p-3 shadow-md
+                flex items-center justify-center gap-2
+                cursor-pointer transition-all duration-300
+                hover:scale-[1.02] hover:shadow-lg
+                ${
+                  selectedPairIndex === index
+                    ? "ring-2 ring-black"
+                    : ""
+                }
+              `}
             >
 
               {/* ACTOR */}
-              <div
-                onClick={() => setSelectedActor(pair.actor)}
-                className="
-                  cursor-pointer
-                  transition-all duration-300
-                  hover:scale-105
-                "
-              >
+              <div>
 
                 <div className={culturalThumbClass}>
                   <img
@@ -714,25 +665,18 @@ export default function ResultsGallery() {
                   />
                 </div>
 
-                <div className="text-center mt-3 text-base font-semibold">
+                <div className="text-center mt-2 text-sm font-semibold">
                   {pair.actor.name}
                 </div>
 
               </div>
 
-              <div className="text-4xl font-light">
+              <div className="text-2xl font-light pointer-events-none">
                 +
               </div>
 
               {/* CULTURE */}
-              <div
-                onClick={() => setSelectedCulture(pair.culture)}
-                className="
-                  cursor-pointer
-                  transition-all duration-300
-                  hover:scale-105
-                "
-              >
+              <div>
 
                 <div className={culturalThumbClass}>
                   <img
@@ -742,7 +686,7 @@ export default function ResultsGallery() {
                   />
                 </div>
 
-                <div className="text-center mt-3 text-base font-semibold">
+                <div className="text-center mt-2 text-sm font-semibold">
                   {pair.culture.name}
                 </div>
 
@@ -755,57 +699,41 @@ export default function ResultsGallery() {
         </div>
 
         {/* OUTPUT */}
-        <div
-          className="
-            max-w-4xl mx-auto bg-white
-            rounded-3xl p-8 shadow-md mb-20
-          "
-        >
+        <div className={`${panelClass} ${contentPanelWidthClass} overflow-hidden mb-10`}>
 
-          <h3 className="text-3xl font-bold text-center mb-8">
+          <h3 className="text-lg font-bold text-center px-5 pt-5 pb-4">
             Output Image
           </h3>
 
-          <div
-            className="
-              bg-gray-100 rounded-2xl
-              min-h-[550px]
-              flex items-center justify-center
-            "
-          >
-
+          <div className="px-4 pb-4">
             <img
               src={culturalOutputSrc}
-              alt={`${selectedActor?.name} and ${selectedCulture?.name} composition`}
-              className="
-                max-w-full max-h-[700px]
-                object-contain rounded-2xl
-              "
+              alt={`${selectedPair.actor.name} and ${selectedPair.culture.name} composition`}
+              className="w-full h-auto block rounded-xl"
             />
-
           </div>
 
         </div>
 
         {/* PROMPT */}
-        <div className="bg-white rounded-3xl p-10 shadow-md mb-24">
+        <div className={`${panelClass} ${contentPanelWidthClass} p-5 mb-12`}>
 
-          <h3 className="text-3xl font-bold mb-6">
+          <h3 className="text-lg font-bold mb-3">
             Prompt
           </h3>
 
-          <p className="text-2xl text-gray-700 leading-relaxed">
+          <p className="text-base text-gray-700 leading-relaxed">
 
             A cinematic cultural composition featuring{" "}
 
             <span className="font-bold text-black">
-              {selectedActor?.name}
+              {selectedPair.actor.name}
             </span>
 
             {" "}immersed in{" "}
 
             <span className="font-bold text-black">
-              {selectedCulture?.name}
+              {selectedPair.culture.name}
             </span>
 
             {" "}environment with dramatic storytelling,
@@ -817,17 +745,17 @@ export default function ResultsGallery() {
 
         {/* ================= REFERENCES ================= */}
 
-        <div className="bg-white rounded-3xl shadow-md p-10">
+        <div className={`${panelClass} p-6`}>
 
           {/* REFERENCES */}
-          <h2 className="text-4xl font-semibold mb-8">
+          <h2 className="text-2xl font-semibold mb-5">
             References
           </h2>
 
           <div
             className="
-              text-xl text-gray-700
-              leading-relaxed space-y-8 mb-16
+              text-base text-gray-700
+              leading-relaxed space-y-5 mb-10
             "
           >
 
@@ -895,14 +823,14 @@ export default function ResultsGallery() {
           </div>
 
           {/* CREDITS */}
-          <h2 className="text-4xl font-semibold mb-8">
+          <h2 className="text-2xl font-semibold mb-5">
             Credits
           </h2>
 
           <div
             className="
-              text-xl text-gray-700
-              leading-relaxed space-y-6
+              text-base text-gray-700
+              leading-relaxed space-y-4
             "
           >
 
