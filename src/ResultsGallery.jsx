@@ -8,14 +8,14 @@ import {
 } from "lucide-react";
 
 import horrorStraight from "../themes/horror/underwater_resultt.png";
-import horrorIsometric from "../themes/cinematic/isometric horror.png";
 import underwaterStraight from "../themes/underwater/underwater_resultt.png";
-import underwaterIsometric from "../themes/cinematic/isometric underwater.png";
 import s1Thumb from "../themes/ads/chotabheem.png";
 import s1Images from "../themes/ads/chotahouse.png";
 import s2Thumb from "../themes/ads/indian sample.png";
 import s2Images from "../themes/ads/indian_house.png";
-import actor1Culture1Img from "../themes/cultural_shots/image (8).png";
+import srkActorImg from "../themes/cultural_shots/image srk.png";
+import upanayanamCultureImg from "../themes/cultural_shots/image upanayanam.png";
+import srkUpanayanamResult from "../themes/cultural_shots/integrated_result_srk_var03_perfect_depth (1).png";
 import actor2Img from "../themes/cultural_shots/image (2).png";
 import culture2Img from "../themes/cultural_shots/image (5).png";
 import actor2Culture2Result from "../themes/cultural_shots/image (7).png";
@@ -46,7 +46,11 @@ const culturalThumbClass =
 
 const panelClass = "bg-white rounded-2xl shadow-md";
 
-const contentPanelWidthClass = "w-4/5 max-w-3xl mx-auto";
+const outputPanelWidthClass = "w-full max-w-5xl mx-auto";
+
+const contentPanelWidthClass = outputPanelWidthClass;
+
+const cinematicOutputAspectClass = "aspect-[3/2]";
 
 const culturalImgClass = "w-full h-full object-contain";
 
@@ -61,7 +65,7 @@ export default function ResultsGallery() {
     {
       id: "S1",
       prompt:
-        "Luxury cinematic perfume advertisement with elegant lighting and premium visual storytelling.",
+        "Medium-wide cinematic shot of a cozy Indian children's bedroom, captured from a closer eye-level perspective with a 35mm lens, focusing on the bed, study table, and surrounding toys rather than the entire room. The composition feels intimate, warm, and naturally lived-in. A wooden bed with a colorful Doraemon cartoon bedsheet fills the center foreground, with soft pillows and slightly messy blankets. Beside the bed, a partially opened Carrom board with scattered coins lies on the tiled floor next to a Chhota Bheem action figure, Beyblade Burst toys, and a colorful toy auto rickshaw. An SG cricket bat leans against a grey Godrej steel almirah covered with faded cartoon stickers and small Virat Kohli posters. A cluttered Indian study table holds a Parle-G biscuit packet, Amul Butter box, Natraj pencils, Classmate notebooks, Camlin crayons, and a warm desk lamp. A red Milton lunch box and a half-open Skybags school backpack sit nearby on the floor. On a side shelf firmly mounted on a solid plain painted wall, a Horlicks jar stands beside a stainless steel Milton water bottle and stacks of Amar Chitra Katha comics. No curtains, no windows on the side walls, only plain painted walls visible behind and around the shelf. Ceiling fan overhead, plastic chair, nostalgic middle-class Indian home atmosphere, authentic clutter, realistic textures, cinematic natural lighting, photorealistic documentary-style interior photography, shallow-to-medium depth of field.",
       thumb: s1Thumb,
       outputs: {
         images: s1Images,
@@ -71,22 +75,13 @@ export default function ResultsGallery() {
     {
       id: "S2",
       prompt:
-        "Urban fashion commercial with editorial composition and cinematic contrast.",
+        "Indian heritage interior in a sandstone and teakwood haveli with an symmetrical layout prioritizing background visibility and depth. Warm golden sunlight streams through geometric jaali screens on the left, casting patterned shadows across wooden floor and walls. In the foreground sits a polished brass urli with floating marigolds and jasmine blossoms, paired with a slender antique brass nilavilakku lamp. Center-right stands an elegant carved Chettinad teak pillar with aged texture, preserving open spatial flow. The back wall features a wooden jharokha with lattice carving framing a devotional artwork, beneath which rest a Bidriware vase with silver inlay patterns and a hammered copper water vessel. The left side contains low cane lounge chairs and a flatwoven dhurrie rug with muted indigo, terracotta, beige. Background details include a hanging temple bell near an arched doorway and earthen clay pots in alcoves. lighting, sandstone and teak textures, wide-angle composition, deep focus, minimal clutter.",
       thumb: s2Thumb,
       outputs: {
         images: s2Images,
       },
     },
 
-    {
-      id: "S3",
-      prompt:
-        "Minimal beverage advertisement with soft gradients and product-centric framing.",
-      thumb: "https://picsum.photos/400?19",
-      outputs: {
-        images: "https://picsum.photos/900/600?27",
-      },
-    },
   ];
 
   const [selectedSample, setSelectedSample] =
@@ -95,66 +90,61 @@ export default function ResultsGallery() {
   /* ================= CINEMATIC ================= */
 
   const cinematicThemes = ["Horror", "Underwater"];
-  const cinematicViews = ["Straight", "Isometric"];
 
   const [selectedTheme, setSelectedTheme] = useState("Horror");
-  const [selectedView, setSelectedView] = useState("Straight");
 
   const cinematicOutputs = {
-    Horror: {
-      Straight: horrorStraight,
-      Isometric: horrorIsometric,
-    },
-    Underwater: {
-      Straight: underwaterStraight,
-      Isometric: underwaterIsometric,
-    },
+    Horror: horrorStraight,
+    Underwater: underwaterStraight,
   };
 
   const cinematicPrompts = {
     Horror:
-      "Photorealistic dark fantasy photography with oppressive atmosphere, volumetric moonlight, and sinister cinematic horror lighting.",
+      "Photorealistic dark fantasy photography, decaying traditional Indian heritage artifacts and furniture abandoned in a grim, ancient stone crypt. Weathered woven rattan cane chairs with faded cushions, a heavy carved wooden pillar draped in thick cobwebs, and an ornate dusty wooden jharokha frame mounted on a crumbling stone wall. A large, oxidized brass urli filled with dark water, wilting marigold flowers, and a single softly glowing candle. Resting on a cold, rough-hewn stone dungeon floor scattered with dead flower petals, debris, and tiny ancient bones. Oppressive, claustrophobic atmosphere, a single cold, piercing volumetric moonbeam shining down through a high barred dungeon window, illuminating glowing dust motes dancing in the air. Heavy shadows, sinister cinematic horror lighting, dense spiderwebs connecting the ancient objects. 8k resolution, dark gothic aesthetic, highly detailed decayed textures, chilling and eerie environment.",
     Underwater:
-      "Photorealistic underwater photography with crystal-clear turquoise water, volumetric god rays, and cinematic marine lighting.",
+      "Photorealistic underwater photography, traditional Indian heritage artifacts and furniture suspended weightlessly in the deep ocean. Floating woven rattan cane chairs, a tilted carved Chettinad wooden pillar, and an ornate wooden jharokha frame. A polished brass urli spilling bright orange marigold flowers into the water current. Resting above a soft white sandy seabed surrounded by vibrant, lush coral reefs and sea sponges. Crystal-clear turquoise ocean water, intense volumetric god rays refracting from the surface, shimmering water caustics dancing across brass and teakwood. Schools of small colorful tropical fish swimming through the scene, tiny rising air bubbles. 8k resolution, cinematic underwater lighting, National Geographic style, highly detailed marine environment.",
   };
 
   const culturalPairs = [
     {
       actor: {
-        name: "Actor 1",
-        img: actor1Culture1Img,
+        name: "SRK",
+        img: srkActorImg,
       },
       culture: {
-        name: "Culture 1",
-        img: actor1Culture1Img,
+        name: "Upanayanam",
+        img: upanayanamCultureImg,
       },
+      output: srkUpanayanamResult,
+      prompt:
+        "Cinematic scene inside an ancient South Indian temple-like mandapam with massive stone pillars, carved walls, and soft golden light streaming from the left, creating a dusty, atmospheric glow. In the center foreground, a man in a white dhoti and a young boy wearing a flower garland participate in a traditional Hindu ritual, with the man guiding the boy as they hold a sacred thread or object. They sit behind a detailed, colorful rangoli (kolam) surrounded by brass plates of flowers, a lit diya on a leaf, and a vessel with green foliage. On the left stands Shah Rukh Khan in a deep purple sherwani, calmly observing the scene.",
     },
     {
       actor: {
-        name: "Actor 2",
+        name: "Ranveer Singh",
         img: actor2Img,
       },
       culture: {
-        name: "Culture 2",
+        name: "Theyyam",
         img: culture2Img,
       },
+      output: actor2Culture2Result,
+      prompt:
+        "Cinematic scene set in a dim, ancient stone corridor resembling a South Indian temple hall, with long carved pillars fading into mist and dramatic, moody lighting. In the left foreground, Ranveer Singh appears as a regal historical figure, seated or leaning forward in an ornate emerald green velvet angrakha with heavy gold zari embroidery, paired with a cream inner garment and a jeweled traditional turban, styled mustache, and kohl-lined eyes. In the right background, a Kathakali dancer performs in full traditional costume with green face makeup, elaborate headgear, and red-white attire. Ritual elements include a brass kalash with coconut and mango leaves, marigolds, and a lit diya on a leaf.",
     },
     {
       actor: {
-        name: "Actor 3",
+        name: "Aishwarya Rai",
         img: actor3Img,
       },
       culture: {
-        name: "Culture 3",
+        name: "Goddess Kali",
         img: culture3Img,
       },
+      output: actor3Culture3Result,
+      prompt:
+        "Cinematic, mystical scene inside an ancient shadowy stone chamber lined with carved pillars and filled with atmospheric fog and smoke, creating a divine yet intense mood. At the center stands a large idol of Goddess Kali, depicted with dark skin, a fierce expression, protruding red tongue, wide eyes, and a third eye on her forehead. She has multiple arms holding symbolic weapons including a sword and a severed head, and is richly adorned with layered garlands of flowers, beads, and heavy gold ornaments cascading to the floor. Beneath her feet lies a prone white figure symbolizing Lord Shiva. In the left foreground, a woman in an ornate cream saree with red and gold borders stands in a prayerful, meditative pose with traditional bridal jewelry. Floating elements include a vertical dagger and hanging torch-like lights, enhancing the surreal sacred atmosphere.",
     },
-  ];
-
-  const culturalOutputs = [
-    actor1Culture1Img,
-    actor2Culture2Result,
-    actor3Culture3Result,
   ];
 
   /* ================= CULTURAL ================= */
@@ -162,7 +152,7 @@ export default function ResultsGallery() {
   const [selectedPairIndex, setSelectedPairIndex] = useState(0);
 
   const selectedPair = culturalPairs[selectedPairIndex];
-  const culturalOutputSrc = culturalOutputs[selectedPairIndex];
+  const culturalOutputSrc = selectedPair.output;
 
   const selectCulturalPair = (index) => {
     setSelectedPairIndex(index);
@@ -193,84 +183,6 @@ export default function ResultsGallery() {
             <br />
             Generation via LoRA-Conditioned Diffusion
           </h1>
-
-          {/* AUTHORS */}
-          <div
-            className="
-              flex
-              flex-wrap
-              justify-center
-              gap-x-8
-              gap-y-3
-              text-[#4f6cff]
-              text-xl
-              mb-6
-            "
-          >
-
-            <a
-              href="https://example.com/teja"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                hover:underline
-                transition-all
-              "
-            >
-              Kuppa Sai Sri Teja¹
-            </a>
-
-            <a
-              href="https://example.com/priyadarsan"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                hover:underline
-                transition-all
-              "
-            >
-              Priyadarsan B¹²
-            </a>
-
-            <a
-              href="https://example.com/parth"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                hover:underline
-                transition-all
-              "
-            >
-              Parth Shinde¹²
-            </a>
-
-            <a
-              href="https://example.com/harsha"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                hover:underline
-                transition-all
-              "
-            >
-              Jinka Harshavardhan¹³
-            </a>
-
-          </div>
-
-          {/* INSTITUTIONS */}
-          <div
-            className="
-              text-2xl
-              text-gray-700
-              leading-relaxed
-              mb-5
-            "
-          >
-            <span className="mr-6">¹ EROS NOW</span>
-            <span className="mr-6">² IIT Madras</span>
-            <span>³ SRMIST</span>
-          </div>
 
           <div className="text-3xl font-semibold mb-14">
             BMVC 2026
@@ -451,7 +363,7 @@ export default function ResultsGallery() {
           Ads Generation
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-2 gap-6 max-w-3xl mx-auto mb-10">
 
           {samples.map((sample) => (
             <div
@@ -459,7 +371,7 @@ export default function ResultsGallery() {
               onClick={() => setSelectedSample(sample)}
               className={`
                 ${panelClass} px-3 pt-3 pb-2
-                h-[220px] flex flex-col
+                h-[240px] flex flex-col
                 cursor-pointer transition-all duration-300
                 hover:scale-[1.02] hover:shadow-lg
 
@@ -488,24 +400,11 @@ export default function ResultsGallery() {
 
         </div>
 
-        {/* PROMPT */}
-        <div className={`${panelClass} p-5 mb-10`}>
-
-          <h3 className="text-lg font-bold mb-3">
-            Prompt
-          </h3>
-
-          <p className="text-base text-gray-700 leading-relaxed">
-            {selectedSample.prompt}
-          </p>
-
-        </div>
-
         {/* OUTPUTS */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-10">
 
           <div
-            className={`${panelClass} ${contentPanelWidthClass} p-4 hover:shadow-lg transition-all duration-300`}
+            className={`${panelClass} ${outputPanelWidthClass} p-5 hover:shadow-lg transition-all duration-300`}
           >
 
             <h3 className="text-lg font-bold text-center mb-4">
@@ -513,25 +412,31 @@ export default function ResultsGallery() {
             </h3>
 
             <div
-              className="
-                bg-gray-100 rounded-xl
-                min-h-[220px]
-                flex items-center justify-center
-              "
+              className={`w-full overflow-hidden rounded-xl bg-gray-100 ${cinematicOutputAspectClass}`}
             >
 
               <img
                 src={selectedSample.outputs.images}
                 alt={`${selectedSample.id} output`}
-                className="
-                  max-w-full max-h-[280px]
-                  object-contain rounded-xl
-                "
+                className="w-full h-full object-contain"
               />
 
             </div>
 
           </div>
+
+        </div>
+
+        {/* PROMPT */}
+        <div className={`${panelClass} p-5 ${outputPanelWidthClass}`}>
+
+          <h3 className="text-lg font-bold mb-3">
+            Prompt
+          </h3>
+
+          <p className="text-base text-gray-700 leading-relaxed whitespace-pre-line">
+            {selectedSample.prompt}
+          </p>
 
         </div>
 
@@ -566,22 +471,6 @@ export default function ResultsGallery() {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <div className={labelCardClass}>View</div>
-            <ArrowRight size={20} strokeWidth={2.5} className="shrink-0" />
-
-            {cinematicViews.map((view) => (
-              <button
-                key={view}
-                type="button"
-                onClick={() => setSelectedView(view)}
-                className={selectCardClass(selectedView === view)}
-              >
-                {view}
-              </button>
-            ))}
-          </div>
-
         </div>
 
         {/* OUTPUT */}
@@ -592,11 +481,15 @@ export default function ResultsGallery() {
           </h3>
 
           <div className="px-4 pb-4">
-            <img
-              src={cinematicOutputs[selectedTheme][selectedView]}
-              alt={`${selectedTheme} ${selectedView} cinematic output`}
-              className="w-full h-auto block rounded-xl"
-            />
+            <div
+              className={`w-full overflow-hidden rounded-xl bg-gray-100 ${cinematicOutputAspectClass}`}
+            >
+              <img
+                src={cinematicOutputs[selectedTheme]}
+                alt={`${selectedTheme} cinematic output`}
+                className="w-full h-full object-cover object-center block"
+              />
+            </div>
           </div>
 
         </div>
@@ -609,14 +502,7 @@ export default function ResultsGallery() {
           </h3>
 
           <p className="text-base text-gray-700 leading-relaxed">
-
-            {cinematicPrompts[selectedTheme]}{" "}
-            Rendered with a{" "}
-            <span className="font-bold text-black">
-              {selectedView.toLowerCase()}
-            </span>
-            {" "}view and movie-grade composition.
-
+            {cinematicPrompts[selectedTheme]}
           </p>
 
         </div>
@@ -706,11 +592,15 @@ export default function ResultsGallery() {
           </h3>
 
           <div className="px-4 pb-4">
-            <img
-              src={culturalOutputSrc}
-              alt={`${selectedPair.actor.name} and ${selectedPair.culture.name} composition`}
-              className="w-full h-auto block rounded-xl"
-            />
+            <div
+              className={`w-full overflow-hidden rounded-xl bg-gray-100 ${cinematicOutputAspectClass}`}
+            >
+              <img
+                src={culturalOutputSrc}
+                alt={`${selectedPair.actor.name} and ${selectedPair.culture.name} composition`}
+                className="w-full h-full object-contain object-center block"
+              />
+            </div>
           </div>
 
         </div>
@@ -723,22 +613,7 @@ export default function ResultsGallery() {
           </h3>
 
           <p className="text-base text-gray-700 leading-relaxed">
-
-            A cinematic cultural composition featuring{" "}
-
-            <span className="font-bold text-black">
-              {selectedPair.actor.name}
-            </span>
-
-            {" "}immersed in{" "}
-
-            <span className="font-bold text-black">
-              {selectedPair.culture.name}
-            </span>
-
-            {" "}environment with dramatic storytelling,
-            realistic lighting and movie-grade aesthetics.
-
+            {selectedPair.prompt}
           </p>
 
         </div>
